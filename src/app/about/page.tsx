@@ -4,6 +4,7 @@ import { Award, BadgeCheck, HeartHandshake, Microscope } from "lucide-react";
 import { PageHeader } from "@/components/ui/page-header";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { Cta } from "@/components/sections/cta";
+import { IMG } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "About",
@@ -47,8 +48,8 @@ export default function AboutPage() {
         <div className="grid gap-12 lg:grid-cols-2 items-center">
           <div className="relative aspect-[4/3] rounded-3xl overflow-hidden ring-1 ring-brand-line">
             <Image
-              src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1600&q=80"
-              alt="Inside the MEGATACH lab"
+              src={IMG.dentalLab}
+              alt="Inside the MEGATACH lab — digital workflow"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"

@@ -41,3 +41,8 @@ next-env.d.ts
 # IDE
 .vscode
 .idea
+
+# Audit artifacts
+screenshots
+.next-dev.log
+.next-prod.log

@@ -1,3 +1,5 @@
+import { IMG } from "./images";
+
 export type Service = {
   slug: string;
   title: string;
@@ -21,8 +23,7 @@ export const services: Service[] = [
       "Natural shade and gum colour matching",
       "5-year manufacturing warranty",
     ],
-    image:
-      "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1600&q=80",
+    image: IMG.dentistExam,
     faqs: [
       {
         q: "How long does a complete denture take?",
@@ -46,8 +47,7 @@ export const services: Service[] = [
       "Precision attachments available",
       "Metal-free aesthetic clasps",
     ],
-    image:
-      "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1600&q=80",
+    image: IMG.partialModel,
     faqs: [
       {
         q: "Cast metal vs. flexible — which is better?",
@@ -67,8 +67,7 @@ export const services: Service[] = [
       "Zirconia and titanium frameworks",
       "Compatible with all major implant systems",
     ],
-    image:
-      "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1600&q=80",
+    image: IMG.implantModel,
     faqs: [
       {
         q: "Do I need surgery for implant dentures?",
@@ -88,8 +87,7 @@ export const services: Service[] = [
       "Acts as a healing aid during gum recovery",
       "Converts to permanent denture after 3–6 months",
     ],
-    image:
-      "https://images.unsplash.com/photo-1581585504920-5ab8d4ce6f4f?auto=format&fit=crop&w=1600&q=80",
+    image: IMG.dentureModel,
     faqs: [
       {
         q: "Will the immediate denture be my final denture?",
@@ -109,8 +107,7 @@ export const services: Service[] = [
       "Tooth additions and re-bonding",
       "Cleaning and polishing service",
     ],
-    image:
-      "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1600&q=80",
+    image: IMG.dentistTreating,
     faqs: [
       {
         q: "How fast can you repair a broken denture?",

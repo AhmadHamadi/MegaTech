@@ -3,6 +3,7 @@ import Image from "next/image";
 import { PageHeader } from "@/components/ui/page-header";
 import { Section } from "@/components/ui/section";
 import { Cta } from "@/components/sections/cta";
+import { IMG } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Smile Gallery",
@@ -11,15 +12,15 @@ export const metadata: Metadata = {
 };
 
 const images = [
-  { src: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1200&q=80", caption: "Complete denture — natural shade match" },
-  { src: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80", caption: "Implant-supported full arch" },
-  { src: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80", caption: "Partial denture — cobalt-chrome frame" },
-  { src: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1200&q=80", caption: "Same-day fracture repair" },
-  { src: "https://images.unsplash.com/photo-1581585504920-5ab8d4ce6f4f?auto=format&fit=crop&w=1200&q=80", caption: "Immediate denture post-extraction" },
-  { src: "https://images.unsplash.com/photo-1559591935-c6c92c6cc6c5?auto=format&fit=crop&w=1200&q=80", caption: "Digital workflow scan" },
-  { src: "https://images.unsplash.com/photo-1606814893907-c2e42943c91f?auto=format&fit=crop&w=1200&q=80", caption: "Hand-characterized teeth" },
-  { src: "https://images.unsplash.com/photo-1612344441107-ef12287e4872?auto=format&fit=crop&w=1200&q=80", caption: "Lab craftsmanship" },
-  { src: "https://images.unsplash.com/photo-1571772996211-2f02c9727629?auto=format&fit=crop&w=1200&q=80", caption: "Patient consultation" },
+  { src: IMG.dentistExam, caption: "Complete denture — natural shade match" },
+  { src: IMG.implantModel, caption: "Implant-supported prosthesis" },
+  { src: IMG.dentureModel, caption: "Full denture — hand-characterized" },
+  { src: IMG.dentistTreating, caption: "Patient fitting appointment" },
+  { src: IMG.partialModel, caption: "Partial denture — precision fit check" },
+  { src: IMG.dentalLab, caption: "Inside the MEGATACH lab" },
+  { src: IMG.operatoryTeal, caption: "Our consultation operatory" },
+  { src: IMG.xrayReview, caption: "Digital imaging review" },
+  { src: IMG.clinicInterior, caption: "Modern clinic environment" },
 ];
 
 export default function GalleryPage() {

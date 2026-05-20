@@ -3,14 +3,15 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
+import { IMG } from "@/lib/images";
 
 const previews = [
-  "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1581585504920-5ab8d4ce6f4f?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1559591935-c6c92c6cc6c5?auto=format&fit=crop&w=900&q=80",
+  IMG.dentistExam,
+  IMG.implantModel,
+  IMG.operatoryTeal,
+  IMG.dentalLab,
+  IMG.dentureModel,
+  IMG.dentistTreating,
 ];
 
 export function GalleryPreview() {
