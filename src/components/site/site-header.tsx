@@ -1,0 +1,97 @@
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
+import { Menu, X, Phone } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { siteConfig } from "@/lib/site-config";
+import { cn } from "@/lib/utils";
+
+export function SiteHeader() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <header className="sticky top-0 z-50 w-full border-b border-brand-line/60 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/70">
+      <div className="container flex h-16 md:h-20 items-center justify-between">
+        <Link href="/" className="flex items-center gap-3" aria-label={siteConfig.name}>
+          <Image
+            src="/brand/logo.png"
+            alt={siteConfig.name}
+            width={200}
+            height={56}
+            priority
+            className="h-9 md:h-11 w-auto"
+          />
+        </Link>
+
+        <nav className="hidden lg:flex items-center gap-8">
+          {siteConfig.nav.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-sm font-medium text-brand-ink/80 transition-colors hover:text-brand-teal"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="hidden lg:flex items-center gap-3">
+          <a
+            href={siteConfig.phoneHref}
+            className="flex items-center gap-2 text-sm font-medium text-brand-ink hover:text-brand-teal"
+          >
+            <Phone className="h-4 w-4" />
+            {siteConfig.phone}
+          </a>
+          <Button asChild variant="accent" size="sm">
+            <Link href="/contact">Book Consultation</Link>
+          </Button>
+        </div>
+
+        <button
+          onClick={() => setOpen(!open)}
+          className="lg:hidden p-2 -mr-2 text-brand-ink"
+          aria-label="Toggle menu"
+        >
+          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
+      </div>
+
+      <div
+        className={cn(
+          "lg:hidden border-t border-brand-line/60 bg-white overflow-hidden transition-all",
+          open ? "max-h-96" : "max-h-0",
+        )}
+      >
+        <nav className="container py-4 flex flex-col gap-1">
+          {siteConfig.nav.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={() => setOpen(false)}
+              className="py-3 text-base font-medium text-brand-ink hover:text-brand-teal border-b border-brand-line/40 last:border-0"
+            >
+              {item.label}
+            </Link>
+          ))}
+          <div className="pt-4 flex flex-col gap-2">
+            <Button asChild variant="accent">
+              <Link href="/contact" onClick={() => setOpen(false)}>
+                Book Consultation
+              </Link>
+            </Button>
+            <a
+              href={siteConfig.phoneHref}
+              className="flex items-center justify-center gap-2 py-3 text-sm font-medium text-brand-ink"
+            >
+              <Phone className="h-4 w-4" />
+              {siteConfig.phone}
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+  );
+}
