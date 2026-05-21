@@ -5,7 +5,7 @@ import { services } from "@/lib/services";
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url;
   const now = new Date();
-  const staticRoutes = ["", "/services", "/gallery", "/testimonials", "/about", "/contact"];
+  const staticRoutes = ["", "/services", "/gallery", "/about", "/contact"];
 
   return [
     ...staticRoutes.map((path) => ({
