@@ -1,9 +1,8 @@
 import { cn } from "@/lib/utils";
 
 /**
- * Editorial chapter mark — small serif italic label + hairline rule.
- * Used at the top of every major section as the site's signature
- * visual anchor. Recognizable with the logo removed.
+ * Section opener — small numbered label with a hairline rule.
+ * Clean sans, not italic.
  */
 export function ChapterMark({
   number,
@@ -16,12 +15,16 @@ export function ChapterMark({
   className?: string;
   tone?: "ink" | "paper";
 }) {
-  const text = tone === "paper" ? "text-white/70" : "text-brand-ink/60";
+  const text = tone === "paper" ? "text-white/70" : "text-brand-teal";
+  const labelColor = tone === "paper" ? "text-white/85" : "text-brand-ink/75";
   const rule = tone === "paper" ? "bg-white/20" : "bg-brand-ink/15";
   return (
     <div className={cn("flex items-center gap-4 mb-8", className)}>
-      <span className={cn("font-serif italic text-sm tracking-wide", text)}>
-        {number} <span className="not-italic"> — </span> {label}
+      <span className={cn("text-xs font-semibold uppercase tracking-[0.2em]", text)}>
+        {number}
+      </span>
+      <span className={cn("text-xs font-semibold uppercase tracking-[0.2em]", labelColor)}>
+        {label}
       </span>
       <span className={cn("h-px flex-1 max-w-[120px]", rule)} />
     </div>

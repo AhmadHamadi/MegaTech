@@ -1,23 +1,27 @@
-const items = ["CDO Registered", "CDCP Provider", "In-House Lab", "5,000+ Smiles Restored"];
+import { Award, BadgeCheck, Microscope, Users } from "lucide-react";
+
+const items = [
+  { icon: BadgeCheck, label: "CDO Registered" },
+  { icon: Award, label: "CDCP Provider" },
+  { icon: Microscope, label: "In-House Lab" },
+  { icon: Users, label: "5,000+ Smiles Restored" },
+];
 
 export function TrustStrip() {
   return (
-    <section className="border-y border-brand-ink/10 bg-white">
-      <div className="container py-10 md:py-12">
-        <p className="text-center text-xs uppercase tracking-[0.25em] text-brand-ink/45 mb-8">
-          <span className="font-serif italic normal-case tracking-normal text-sm text-brand-ink/55">
-            Trusted by dental professionals
-          </span>
-          <span className="mx-3 text-brand-ink/20">·</span>
-          across Ontario
+    <section className="border-y border-brand-line bg-brand-surface">
+      <div className="container py-8 md:py-10">
+        <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-6">
+          Trusted by dental professionals across Ontario
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 md:gap-x-16">
-          {items.map((label, i) => (
-            <div key={label} className="flex items-center gap-3 text-brand-ink/75">
-              <span className="font-serif italic text-xs text-brand-teal">
-                0{i + 1}
-              </span>
-              <span className="text-sm md:text-base">{label}</span>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {items.map(({ icon: Icon, label }) => (
+            <div
+              key={label}
+              className="flex items-center justify-center gap-3 text-brand-ink/80"
+            >
+              <Icon className="h-5 w-5 text-brand-teal" />
+              <span className="text-sm md:text-base font-medium">{label}</span>
             </div>
           ))}
         </div>

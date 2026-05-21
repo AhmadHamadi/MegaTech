@@ -39,9 +39,9 @@ export function Process() {
         {steps.map((step, i) => (
           <div
             key={step.n}
-            className="relative rounded-2xl bg-white p-7 ring-1 ring-brand-line hover:ring-brand-teal hover:shadow-lg transition-all"
+            className="relative rounded-2xl bg-brand-surface p-7 ring-1 ring-brand-line hover:ring-brand-teal hover:shadow-lg transition-all"
           >
-            <div className="font-display text-5xl font-semibold text-brand-teal/20">
+            <div className="font-display text-5xl font-semibold text-brand-teal/25">
               {step.n}
             </div>
             <h3 className="mt-2 font-display text-xl font-semibold text-brand-ink">
@@ -54,6 +54,7 @@ export function Process() {
           </div>
         ))}
       </div>
+
       <div className="mt-12 text-center">
         <Button asChild variant="default" size="lg">
           <Link href="#book">

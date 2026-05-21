@@ -38,42 +38,49 @@ const reasons = [
 
 export function WhyUs() {
   return (
-    <Section id="why-us" className="bg-brand-ink text-white">
-      <SectionHeader
-        chapter={{ number: "02", label: "Why MEGATACH" }}
-        title="Six reasons patients and dentists choose us"
-        description="From the first consultation to the final fitting, every step is designed around precision, comfort, and your time."
-        tone="paper"
+    <Section id="why-us" className="bg-brand-ink text-white relative overflow-hidden">
+      <div
+        className="absolute -top-40 -right-40 h-[500px] w-[500px] rounded-full opacity-15 blur-3xl"
+        style={{ background: "radial-gradient(circle, #29B1C5 0%, transparent 70%)" }}
+        aria-hidden
       />
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 divide-x divide-y divide-white/8 border-y border-white/8">
-        {reasons.map((r) => (
-          <div
-            key={r.n}
-            className="group relative p-8 md:p-10 hover:bg-white/[0.03] transition-colors"
-          >
-            <div className="flex items-baseline gap-3">
-              <span className="font-serif italic text-sm text-brand-teal">{r.n}</span>
-              <div className="h-px flex-1 bg-white/15" />
-            </div>
-            <h3 className="mt-5 font-display text-2xl font-normal text-white leading-tight">
-              {r.title}
-            </h3>
-            <p className="mt-3 text-white/65 text-pretty leading-relaxed">{r.body}</p>
-          </div>
-        ))}
-      </div>
+      <div className="relative">
+        <SectionHeader
+          chapter={{ number: "02", label: "Why MEGATACH" }}
+          title="Six reasons patients and dentists choose us"
+          description="From the first consultation to the final fitting, every step is designed around precision, comfort, and your time."
+          tone="paper"
+        />
 
-      <div className="mt-14 flex flex-col sm:flex-row sm:items-center gap-4 justify-center text-center">
-        <Button asChild variant="accent" size="lg">
-          <Link href="#book">
-            Start with a free consultation
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-        </Button>
-        <span className="font-serif italic text-sm text-white/55">
-          No referral needed · CDCP accepted
-        </span>
+        <div className="grid gap-4 md:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {reasons.map((r) => (
+            <div
+              key={r.n}
+              className="group rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur p-7 md:p-8 hover:bg-white/[0.08] hover:ring-brand-teal/40 transition-all"
+            >
+              <div className="font-display text-5xl md:text-6xl font-semibold text-brand-teal/40 leading-none">
+                {r.n}
+              </div>
+              <h3 className="mt-3 font-display text-xl font-semibold text-white">
+                {r.title}
+              </h3>
+              <p className="mt-3 text-white/70 text-pretty leading-relaxed">{r.body}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12 flex flex-col sm:flex-row sm:items-center gap-4 justify-center text-center">
+          <Button asChild variant="accent" size="lg">
+            <Link href="#book">
+              Start with a free consultation
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </Button>
+          <span className="text-sm text-white/60">
+            No referral needed · CDCP accepted
+          </span>
+        </div>
       </div>
     </Section>
   );

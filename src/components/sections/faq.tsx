@@ -17,7 +17,7 @@ export function FaqSection() {
   };
 
   return (
-    <Section id="faq" className="paper-grain">
+    <Section id="faq" className="bg-brand-surface">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

@@ -31,8 +31,8 @@ const cases = [
 
 export function FeaturedCases() {
   return (
-    <Section id="cases" className="paper-grain">
-      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14 md:mb-20">
+    <Section id="cases" className="bg-brand-surface">
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 md:mb-16">
         <div className="max-w-2xl">
           <SectionHeader
             chapter={{ number: "05", label: "Recent Work" }}
@@ -48,33 +48,32 @@ export function FeaturedCases() {
         </Button>
       </div>
 
-      <div className="grid gap-x-6 gap-y-12 md:grid-cols-3">
-        {cases.map((c, i) => (
-          <article key={c.title} className="group flex flex-col">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-md ring-1 ring-brand-ink/8 shadow-soft">
+      <div className="grid gap-6 md:grid-cols-3">
+        {cases.map((c) => (
+          <article
+            key={c.title}
+            className="group flex flex-col rounded-2xl bg-white ring-1 ring-brand-line overflow-hidden hover:ring-brand-teal hover:shadow-xl transition-all"
+          >
+            <div className="relative aspect-[4/3] overflow-hidden">
               <Image
                 src={c.image}
                 alt={c.title}
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
-            <div className="mt-5 flex items-baseline gap-3">
-              <span className="font-serif italic text-xs text-brand-teal">
-                Case No. 00{42 + i}
-              </span>
-              <span className="text-xs text-brand-ink/40">·</span>
-              <span className="text-xs uppercase tracking-[0.15em] text-brand-ink/55">
+            <div className="flex-1 flex flex-col p-6 md:p-7">
+              <span className="inline-flex self-start items-center rounded-full bg-brand-teal/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-teal">
                 {c.tag}
               </span>
+              <h3 className="mt-4 font-display text-xl font-semibold text-brand-ink text-pretty">
+                {c.title}
+              </h3>
+              <p className="mt-3 text-sm text-muted-foreground text-pretty leading-relaxed flex-1">
+                {c.body}
+              </p>
             </div>
-            <h3 className="mt-3 font-display text-xl md:text-2xl font-normal text-brand-ink text-pretty tracking-tight leading-tight">
-              {c.title}
-            </h3>
-            <p className="mt-3 text-[15px] text-brand-ink/65 text-pretty leading-relaxed">
-              {c.body}
-            </p>
           </article>
         ))}
       </div>

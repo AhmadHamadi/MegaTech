@@ -11,20 +11,18 @@ export function Section({
   id?: string;
 }) {
   return (
-    <section id={id} className={cn("py-24 md:py-32", className)}>
+    <section id={id} className={cn("py-20 md:py-28", className)}>
       <div className="container">{children}</div>
     </section>
   );
 }
 
-/**
- * @deprecated Use ChapterMark instead — the new editorial section opener
- */
 export function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <span className="font-serif italic text-sm tracking-wide text-brand-ink/60">
-      — {children}
-    </span>
+    <div className="mb-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-teal">
+      <span className="h-px w-8 bg-brand-teal" />
+      {children}
+    </div>
   );
 }
 
@@ -44,11 +42,11 @@ export function SectionHeader({
   tone?: "ink" | "paper";
 }) {
   const headingColor = tone === "paper" ? "text-white" : "text-brand-ink";
-  const descColor = tone === "paper" ? "text-white/70" : "text-brand-ink/65";
+  const descColor = tone === "paper" ? "text-white/70" : "text-muted-foreground";
   return (
     <div
       className={cn(
-        "max-w-3xl mb-14 md:mb-20",
+        "max-w-2xl mb-12 md:mb-16",
         align === "center" && "mx-auto text-center",
       )}
     >
@@ -64,7 +62,7 @@ export function SectionHeader({
       ) : null}
       <h2
         className={cn(
-          "font-display text-[2.25rem] md:text-[3.5rem] leading-[1.05] font-normal text-balance tracking-tight",
+          "font-display text-3xl md:text-5xl font-semibold tracking-tight text-balance leading-[1.05]",
           headingColor,
         )}
       >
@@ -73,7 +71,7 @@ export function SectionHeader({
       {description ? (
         <p
           className={cn(
-            "mt-6 text-lg md:text-xl text-pretty leading-relaxed max-w-2xl",
+            "mt-5 text-lg text-pretty leading-relaxed",
             align === "center" && "mx-auto",
             descColor,
           )}

@@ -1,44 +1,41 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ShieldCheck, Clock, PhoneCall } from "lucide-react";
+import { ArrowRight, ShieldCheck, Clock, PhoneCall, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { IMG } from "@/lib/images";
 import { siteConfig } from "@/lib/site-config";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-brand-paper">
-      {/* Single warm cream-to-white wash. No radial blobs. */}
+    <section className="relative overflow-hidden bg-white">
       <div
-        className="absolute inset-x-0 top-0 h-2/3 bg-gradient-to-b from-brand-paper to-white"
+        className="absolute -top-40 -right-40 h-[620px] w-[620px] rounded-full opacity-25 blur-3xl"
+        style={{ background: "radial-gradient(circle, #29B1C5 0%, transparent 70%)" }}
         aria-hidden
       />
 
-      <div className="container relative pt-10 md:pt-14 lg:pt-16 pb-20 md:pb-24 lg:pb-28">
-        {/* Chapter mark */}
-        <div className="flex items-center gap-4 mb-12 md:mb-14">
-          <span className="font-serif italic text-sm tracking-wide text-brand-ink/60">
-            00 <span className="not-italic"> — </span> MEGATACH Dental Lab · Toronto
-          </span>
-          <span className="h-px flex-1 max-w-[160px] bg-brand-ink/15" />
-        </div>
-
-        <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-16 items-center">
+      <div className="container relative pt-12 pb-20 md:pt-16 md:pb-24 lg:pt-20 lg:pb-28">
+        <div className="grid gap-10 lg:grid-cols-[1.15fr_1fr] lg:gap-14 items-center">
           {/* LEFT — text column */}
           <div className="animate-fade-up">
-            <h1 className="font-display text-[2.75rem] sm:text-5xl md:text-6xl lg:text-[4.25rem] xl:text-[4.75rem] font-normal leading-[1.02] text-brand-ink text-balance tracking-[-0.02em]">
+            <div className="inline-flex items-center gap-2 rounded-full bg-brand-teal/10 ring-1 ring-brand-teal/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-brand-teal">
+              <Sparkles className="h-3.5 w-3.5" />
+              Trusted Ontario Dental Lab
+            </div>
+
+            <h1 className="mt-6 font-display text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[3.75rem] xl:text-[4.25rem] font-semibold leading-[1.05] text-brand-ink text-balance tracking-tight">
               Precision dentures,{" "}
-              <span className="accent-serif">crafted with care.</span>
+              <span className="gradient-text">crafted with care.</span>
             </h1>
 
-            <p className="mt-8 text-lg md:text-xl text-brand-ink/70 max-w-xl text-pretty leading-[1.6]">
+            <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-xl text-pretty leading-relaxed">
               Custom dentures, repairs, relines, and implant-supported
               prosthetics — engineered with digital precision and finished by
               hand in our Toronto lab.
             </p>
 
-            <div className="mt-10 flex flex-col sm:flex-row sm:flex-wrap gap-3">
-              <Button asChild variant="default" size="lg">
+            <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4">
+              <Button asChild variant="accent" size="lg">
                 <Link href="#book">
                   Book a Free Consultation
                   <ArrowRight className="h-4 w-4" />
@@ -52,18 +49,18 @@ export function Hero() {
               </Button>
             </div>
 
-            <div className="mt-8 flex items-center gap-3 text-sm text-brand-ink/55">
-              <span className="font-serif italic">No referral needed</span>
-              <span className="text-brand-ink/30">·</span>
-              <span className="font-serif italic">CDCP accepted</span>
-              <span className="text-brand-ink/30">·</span>
-              <span className="font-serif italic">Free consultation</span>
+            <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
+              <span className="font-medium text-brand-ink">No referral needed</span>
+              <span className="text-brand-ink/20">·</span>
+              <span className="font-medium text-brand-ink">CDCP accepted</span>
+              <span className="text-brand-ink/20">·</span>
+              <span className="font-medium text-brand-ink">Free consultation</span>
             </div>
           </div>
 
-          {/* RIGHT — image column. Source is 612x408 native; we display at <=600px so it never upscales. */}
+          {/* RIGHT — image column (source 612x408 displays at ~560px = no upscaling) */}
           <div className="relative animate-fade-up [animation-delay:200ms]">
-            <div className="relative aspect-[3/2] overflow-hidden rounded-md shadow-rim">
+            <div className="relative aspect-[3/2] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-brand-line">
               <Image
                 src={IMG.heroLabBench}
                 alt="MEGATACH denturist hand-finishing a dental prosthesis on an articulator"
@@ -75,35 +72,29 @@ export function Hero() {
               />
             </div>
 
-            {/* Editorial caption below the image, not overlaid */}
-            <p className="mt-4 font-serif italic text-xs text-brand-ink/55 leading-snug">
-              Plate I — Hand-finishing a precision cast partial on the
-              articulator. Toronto, 2026.
-            </p>
-
-            {/* Floating card — top-right (outside image) */}
-            <div className="hidden md:flex absolute -right-4 lg:-right-6 -top-5 bg-white rounded-md shadow-lift p-4 ring-1 ring-brand-ink/5 items-center gap-3 animate-slide-in [animation-delay:600ms] z-10">
-              <div className="h-10 w-10 rounded-md bg-brand-teal/10 flex items-center justify-center flex-shrink-0">
+            {/* Floating card — top-right */}
+            <div className="hidden md:flex absolute -right-4 lg:-right-6 -top-5 bg-white rounded-2xl shadow-xl p-4 ring-1 ring-brand-line items-center gap-3 animate-slide-in [animation-delay:600ms] z-10">
+              <div className="h-11 w-11 rounded-xl bg-brand-teal/10 flex items-center justify-center flex-shrink-0">
                 <Clock className="h-5 w-5 text-brand-teal" />
               </div>
               <div>
-                <p className="text-sm font-medium text-brand-ink leading-tight">
+                <p className="text-sm font-semibold text-brand-ink leading-tight">
                   Same-Day Repairs
                 </p>
-                <p className="text-xs text-brand-ink/55 mt-0.5">Drop-in service</p>
+                <p className="text-xs text-muted-foreground">Drop-in service</p>
               </div>
             </div>
 
-            {/* Floating card — bottom-left (outside image) */}
-            <div className="hidden md:flex absolute -left-4 lg:-left-6 -bottom-5 bg-white rounded-md shadow-lift p-4 ring-1 ring-brand-ink/5 items-center gap-3 animate-slide-in [animation-delay:800ms] z-10">
-              <div className="h-10 w-10 rounded-md bg-brand-teal/10 flex items-center justify-center flex-shrink-0">
+            {/* Floating card — bottom-left */}
+            <div className="hidden md:flex absolute -left-4 lg:-left-6 -bottom-5 bg-white rounded-2xl shadow-xl p-4 ring-1 ring-brand-line items-center gap-3 animate-slide-in [animation-delay:800ms] z-10">
+              <div className="h-11 w-11 rounded-xl bg-brand-teal/10 flex items-center justify-center flex-shrink-0">
                 <ShieldCheck className="h-5 w-5 text-brand-teal" />
               </div>
               <div>
-                <p className="text-sm font-medium text-brand-ink leading-tight">
+                <p className="text-sm font-semibold text-brand-ink leading-tight">
                   5-Year Warranty
                 </p>
-                <p className="text-xs text-brand-ink/55 mt-0.5">On every prosthesis</p>
+                <p className="text-xs text-muted-foreground">On every prosthesis</p>
               </div>
             </div>
           </div>
@@ -112,4 +103,3 @@ export function Hero() {
     </section>
   );
 }
-

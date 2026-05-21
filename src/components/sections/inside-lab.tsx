@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Microscope, Layers, Cpu } from "lucide-react";
 import { Section } from "@/components/ui/section";
+import { ChapterMark } from "@/components/ui/chapter-mark";
 import { Button } from "@/components/ui/button";
 import { IMG } from "@/lib/images";
 
@@ -25,10 +26,10 @@ const capabilities = [
 
 export function InsideLab() {
   return (
-    <Section id="inside-lab" className="paper-grain">
+    <Section id="inside-lab" className="bg-brand-surface">
       <div className="grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16 items-center">
         <div className="relative">
-          <div className="relative aspect-[4/5] rounded-3xl overflow-hidden ring-1 ring-brand-line shadow-xl">
+          <div className="relative aspect-[4/5] rounded-2xl overflow-hidden ring-1 ring-brand-line shadow-xl">
             <Image
               src={IMG.dentalLab}
               alt="A MEGATACH technician working in our Toronto dental lab"
@@ -37,26 +38,12 @@ export function InsideLab() {
               className="object-cover"
             />
           </div>
-          <div className="absolute -bottom-5 -right-5 lg:-right-8 max-w-[260px] rounded-2xl bg-white p-5 ring-1 ring-brand-line shadow-2xl hidden md:block">
-            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-brand-teal mb-1">
-              Toronto, Ontario
-            </p>
-            <p className="text-sm text-brand-ink leading-relaxed">
-              Every prosthesis you receive is designed, milled, and finished in
-              this lab — by certified denturists, not contractors.
-            </p>
-          </div>
         </div>
 
         <div>
-          <div className="flex items-center gap-4 mb-8">
-            <span className="font-serif italic text-sm tracking-wide text-brand-ink/60">
-              03 <span className="not-italic"> — </span> Inside Our Lab
-            </span>
-            <span className="h-px flex-1 max-w-[120px] bg-brand-ink/15" />
-          </div>
-          <h2 className="font-display text-[2.25rem] md:text-[3.5rem] font-normal text-brand-ink text-balance leading-[1.05] tracking-tight">
-            One roof. <span className="accent-serif">Every step.</span> No compromises.
+          <ChapterMark number="03" label="Inside Our Lab" />
+          <h2 className="font-display text-3xl md:text-5xl font-semibold text-brand-ink text-balance leading-[1.05] tracking-tight">
+            One roof. Every step. No compromises.
           </h2>
           <div className="mt-6 space-y-4 text-muted-foreground text-pretty leading-relaxed">
             <p>

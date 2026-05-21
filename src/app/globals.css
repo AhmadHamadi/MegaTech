@@ -41,12 +41,6 @@
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-display tracking-tight;
-    font-feature-settings: "ss01" 1, "ss02" 1;
-  }
-
-  .font-serif-italic {
-    @apply font-serif italic;
-    font-feature-settings: "ss01" 1;
   }
 
   ::selection {
@@ -61,21 +55,13 @@
   .text-pretty {
     text-wrap: pretty;
   }
-  .accent-serif {
-    @apply font-serif italic font-normal text-brand-teal;
-  }
   .hairline {
     @apply h-px w-full bg-brand-ink/10;
   }
-  .hairline-strong {
-    @apply h-px w-full bg-brand-ink/20;
-  }
-  .paper-grain {
-    background-color: #F4EDE3;
-    background-image:
-      radial-gradient(rgba(35, 38, 40, 0.025) 1px, transparent 1px),
-      radial-gradient(rgba(35, 38, 40, 0.02) 1px, transparent 1px);
-    background-size: 12px 12px, 36px 36px;
-    background-position: 0 0, 6px 6px;
+  .gradient-text {
+    background: linear-gradient(135deg, #232628 0%, #29B1C5 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }

@@ -37,17 +37,13 @@ const config: Config = {
           teal: "#29B1C5",
           tealDark: "#1F8FA0",
           tealLight: "#5BCBDB",
-          paper: "#F4EDE3",
-          paperDark: "#E8DFD0",
           surface: "#F8FAFC",
           line: "#E2E8F0",
-          rule: "#1A1D1F",
         },
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        display: ["var(--font-fraunces)", "Georgia", "serif"],
-        serif: ["var(--font-fraunces)", "Georgia", "serif"],
+        display: ["var(--font-sora)", "var(--font-inter)", "system-ui", "sans-serif"],
       },
       boxShadow: {
         soft: "0 2px 24px -8px rgba(35,38,40,0.12)",
