@@ -5,16 +5,18 @@ import { siteConfig } from "@/lib/site-config";
 
 export function BookSection() {
   return (
-    <Section id="book" className="bg-gradient-to-br from-brand-surface via-white to-brand-teal/5">
-      <div className="rounded-3xl bg-brand-surface ring-1 ring-brand-line p-6 md:p-10 lg:p-14">
-        <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
+    <Section id="book" className="bg-white border-t border-brand-ink/10">
+      <div>
+        <div className="grid gap-14 lg:grid-cols-5 lg:gap-20">
           <div className="lg:col-span-3">
-            <div className="mb-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
-              <span className="h-px w-8 bg-brand-teal" />
-              Book a Consultation
+            <div className="flex items-center gap-4 mb-8">
+              <span className="font-serif italic text-sm tracking-wide text-brand-ink/60">
+                09 <span className="not-italic"> — </span> Book a Consultation
+              </span>
+              <span className="h-px flex-1 max-w-[120px] bg-brand-ink/15" />
             </div>
-            <h2 className="font-display text-3xl md:text-5xl font-semibold text-brand-ink text-balance">
-              Ready to restore your smile?
+            <h2 className="font-display text-[2.25rem] md:text-[3.5rem] font-normal text-brand-ink text-balance leading-[1.05] tracking-tight">
+              Ready to <span className="accent-serif">restore</span> your smile?
             </h2>
             <p className="mt-4 text-lg text-muted-foreground text-pretty">
               Tell us a little about what you need and we&apos;ll respond
@@ -25,9 +27,13 @@ export function BookSection() {
             </div>
           </div>
 
-          <aside className="lg:col-span-2 space-y-5">
-            <div className="rounded-2xl bg-white p-6 ring-1 ring-brand-line">
-              <h3 className="font-display text-lg font-semibold text-brand-ink mb-5">
+          <aside className="lg:col-span-2 space-y-6">
+            <div className="paper-grain rounded-md p-6 ring-1 ring-brand-ink/8">
+              <div className="flex items-center gap-3 mb-5">
+                <span className="font-serif italic text-sm text-brand-teal">Direct</span>
+                <div className="h-px flex-1 bg-brand-ink/15" />
+              </div>
+              <h3 className="font-display text-xl font-normal text-brand-ink mb-5">
                 Or reach us directly
               </h3>
               <ul className="space-y-4 text-sm">
@@ -67,9 +73,12 @@ export function BookSection() {
               </ul>
             </div>
 
-            <div className="rounded-2xl bg-brand-ink p-6 text-white">
-              <p className="text-sm text-white/80 leading-relaxed">
-                <span className="font-semibold text-white">
+            <div className="rounded-md bg-brand-ink p-6 text-white">
+              <span className="font-serif italic text-sm text-brand-teal">
+                Walk-in service
+              </span>
+              <p className="mt-3 text-sm text-white/80 leading-relaxed">
+                <span className="font-display text-base text-white">
                   Need a same-day repair?
                 </span>{" "}
                 Drop off your denture before noon and we&apos;ll have it ready

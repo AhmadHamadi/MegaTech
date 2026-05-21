@@ -40,20 +40,17 @@ const points = [
 export function Insurance() {
   return (
     <Section id="insurance" className="bg-white">
-      <div className="rounded-3xl bg-gradient-to-br from-brand-ink to-brand-ink/95 px-8 py-14 md:p-16 relative overflow-hidden">
-        <div
-          className="absolute -top-32 -right-32 h-[400px] w-[400px] rounded-full opacity-20 blur-3xl"
-          style={{ background: "radial-gradient(circle, #29B1C5 0%, transparent 70%)" }}
-          aria-hidden
-        />
-        <div className="relative grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
+      <div className="rounded-md bg-brand-ink px-8 py-16 md:p-20 relative overflow-hidden">
+        <div className="grid gap-14 lg:grid-cols-2 lg:gap-20 items-start">
           <div>
-            <div className="mb-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
-              <span className="h-px w-8 bg-brand-teal" />
-              Insurance &amp; Coverage
+            <div className="flex items-center gap-4 mb-8">
+              <span className="font-serif italic text-sm tracking-wide text-white/60">
+                06 <span className="not-italic"> — </span> Insurance &amp; Coverage
+              </span>
+              <span className="h-px flex-1 max-w-[120px] bg-white/20" />
             </div>
-            <h2 className="font-display text-3xl md:text-5xl font-semibold text-white text-balance">
-              We make insurance simple
+            <h2 className="font-display text-[2.25rem] md:text-[3.5rem] font-normal text-white text-balance leading-[1.05] tracking-tight">
+              We make insurance <span className="accent-serif">simple.</span>
             </h2>
             <p className="mt-5 text-lg text-white/70 text-pretty leading-relaxed max-w-lg">
               MEGATACH works with every major Ontario benefit plan and is a
@@ -61,14 +58,14 @@ export function Insurance() {
               claims, and walk you through every line — so the only thing
               you focus on is your smile.
             </p>
-            <div className="mt-8 flex flex-wrap gap-2">
+            <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-3 max-w-md">
               {insurers.map((i) => (
-                <span
+                <div
                   key={i}
-                  className="inline-flex items-center rounded-full bg-white/10 ring-1 ring-white/15 px-4 py-2 text-sm text-white"
+                  className="text-sm text-white/80 border-b border-white/15 pb-2"
                 >
                   {i}
-                </span>
+                </div>
               ))}
             </div>
             <div className="mt-8">
@@ -81,17 +78,19 @@ export function Insurance() {
             </div>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-4">
-            {points.map(({ icon: Icon, title, body }) => (
-              <div
-                key={title}
-                className="rounded-2xl bg-white/5 ring-1 ring-white/10 p-6 backdrop-blur"
-              >
-                <div className="h-10 w-10 rounded-xl bg-brand-teal/15 ring-1 ring-brand-teal/30 flex items-center justify-center">
-                  <Icon className="h-5 w-5 text-brand-teal" />
+          <div className="grid sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-white/10 border-y sm:border-y-0 border-white/10">
+            {points.map(({ icon: Icon, title, body }, i) => (
+              <div key={title} className="p-6 sm:p-7">
+                <div className="flex items-baseline gap-3">
+                  <span className="font-serif italic text-xs text-brand-teal">
+                    0{i + 1}
+                  </span>
+                  <Icon className="h-4 w-4 text-brand-teal" />
                 </div>
-                <h3 className="mt-4 font-display font-semibold text-white">{title}</h3>
-                <p className="mt-2 text-sm text-white/70 leading-relaxed">{body}</p>
+                <h3 className="mt-4 font-display text-lg font-normal text-white">
+                  {title}
+                </h3>
+                <p className="mt-2 text-sm text-white/65 leading-relaxed">{body}</p>
               </div>
             ))}
           </div>

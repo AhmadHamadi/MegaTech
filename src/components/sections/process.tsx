@@ -28,9 +28,9 @@ const steps = [
 
 export function Process() {
   return (
-    <Section className="bg-brand-surface bg-dot">
+    <Section className="bg-white">
       <SectionHeader
-        eyebrow="Our Process"
+        chapter={{ number: "04", label: "Our Process" }}
         title="A workflow built on precision at every step"
         description="Modern digital tools paired with old-world craftsmanship — that's how we deliver prosthetics that fit, function, and last."
       />

@@ -17,13 +17,13 @@ export function FaqSection() {
   };
 
   return (
-    <Section id="faq" className="bg-brand-surface">
+    <Section id="faq" className="paper-grain">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       <SectionHeader
-        eyebrow="FAQs"
+        chapter={{ number: "08", label: "Common Questions" }}
         title="Answers to common denture questions"
         description="Everything you need to know about dentures, costs, CDCP coverage, repairs, and the MEGATACH process — straight from our denturists."
       />

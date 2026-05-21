@@ -25,7 +25,7 @@ const capabilities = [
 
 export function InsideLab() {
   return (
-    <Section id="inside-lab" className="bg-brand-surface relative overflow-hidden">
+    <Section id="inside-lab" className="paper-grain">
       <div className="grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16 items-center">
         <div className="relative">
           <div className="relative aspect-[4/5] rounded-3xl overflow-hidden ring-1 ring-brand-line shadow-xl">
@@ -49,12 +49,14 @@ export function InsideLab() {
         </div>
 
         <div>
-          <div className="mb-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
-            <span className="h-px w-8 bg-brand-teal" />
-            Inside Our Lab
+          <div className="flex items-center gap-4 mb-8">
+            <span className="font-serif italic text-sm tracking-wide text-brand-ink/60">
+              03 <span className="not-italic"> — </span> Inside Our Lab
+            </span>
+            <span className="h-px flex-1 max-w-[120px] bg-brand-ink/15" />
           </div>
-          <h2 className="font-display text-3xl md:text-5xl font-semibold text-brand-ink text-balance leading-tight">
-            One roof. Every step. No compromises.
+          <h2 className="font-display text-[2.25rem] md:text-[3.5rem] font-normal text-brand-ink text-balance leading-[1.05] tracking-tight">
+            One roof. <span className="accent-serif">Every step.</span> No compromises.
           </h2>
           <div className="mt-6 space-y-4 text-muted-foreground text-pretty leading-relaxed">
             <p>
