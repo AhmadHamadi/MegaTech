@@ -8,6 +8,7 @@ const u = (id: string, w = 1600, q = 80) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=${q}`;
 
 export const IMG = {
+  heroCraft: u("1776406987595-ba14f3510c07"),
   heroPatient: u("1617812191081-2a24e3f30e45"),
   dentistExam: u("1606811971618-4486d14f3f99"),
   dentistTreating: u("1657470179447-0f5aa16daa91"),

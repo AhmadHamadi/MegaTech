@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { services } from "@/lib/services";
 
@@ -10,39 +10,56 @@ export function ServicesOverview() {
       <SectionHeader
         eyebrow="What we do"
         title="Comprehensive denture & prosthetic services"
-        description="From full-arch implant solutions to same-day repairs, every prosthesis is custom-designed and finished by certified denturists in our Toronto lab."
+        description="From full-arch implant solutions to same-day repairs, every prosthesis is custom-designed and finished by certified denturists in our Toronto lab. Five core services — one consistent standard."
       />
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {services.map((service) => (
-          <Link
+          <article
             key={service.slug}
-            href={`/services/${service.slug}`}
-            className="group relative overflow-hidden rounded-3xl bg-white ring-1 ring-brand-line transition-all hover:ring-brand-teal hover:shadow-xl"
+            className="group flex flex-col rounded-3xl bg-white ring-1 ring-brand-line overflow-hidden hover:ring-brand-teal hover:shadow-xl transition-all"
           >
             <div className="relative aspect-[16/10] overflow-hidden">
               <Image
                 src={service.image}
                 alt={service.title}
                 fill
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/70 via-brand-ink/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/40 via-transparent to-transparent" />
             </div>
 
-            <div className="p-7">
-              <div className="flex items-start justify-between gap-4">
-                <h3 className="font-display text-xl md:text-2xl font-semibold text-brand-ink group-hover:text-brand-teal transition-colors">
-                  {service.title}
-                </h3>
-                <div className="h-10 w-10 rounded-full bg-brand-surface flex items-center justify-center group-hover:bg-brand-teal transition-colors">
-                  <ArrowUpRight className="h-4 w-4 text-brand-ink group-hover:text-white transition-colors" />
-                </div>
+            <div className="flex-1 flex flex-col p-6 md:p-7">
+              <h3 className="font-display text-xl md:text-2xl font-semibold text-brand-ink">
+                {service.title}
+              </h3>
+              <p className="mt-3 text-sm text-muted-foreground text-pretty leading-relaxed">
+                {service.description}
+              </p>
+
+              <ul className="mt-5 space-y-2.5">
+                {service.bullets.slice(0, 3).map((b) => (
+                  <li key={b} className="flex items-start gap-2.5 text-sm text-brand-ink">
+                    <span className="mt-0.5 h-4 w-4 rounded-full bg-brand-teal/10 flex items-center justify-center flex-shrink-0">
+                      <Check className="h-2.5 w-2.5 text-brand-teal" />
+                    </span>
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-auto pt-6">
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-brand-teal hover:text-brand-tealDark transition-colors"
+                >
+                  Learn more about {service.title.toLowerCase()}
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                </Link>
               </div>
-              <p className="mt-3 text-muted-foreground text-pretty">{service.short}</p>
             </div>
-          </Link>
+          </article>
         ))}
       </div>
     </Section>

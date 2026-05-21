@@ -93,8 +93,8 @@ export function Hero() {
 
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-brand-line">
               <Image
-                src={IMG.heroPatient}
-                alt="Happy MEGATACH patient with restored smile"
+                src={IMG.heroCraft}
+                alt="MEGATACH denturist hand-crafting a custom dental prosthesis"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
