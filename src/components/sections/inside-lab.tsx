@@ -25,7 +25,7 @@ const capabilities = [
 
 export function InsideLab() {
   return (
-    <Section id="inside-lab" className="bg-white">
+    <Section id="inside-lab" className="bg-brand-surface relative overflow-hidden">
       <div className="grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16 items-center">
         <div className="relative">
           <div className="relative aspect-[4/5] rounded-3xl overflow-hidden ring-1 ring-brand-line shadow-xl">

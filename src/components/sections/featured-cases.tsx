@@ -31,7 +31,7 @@ const cases = [
 
 export function FeaturedCases() {
   return (
-    <Section id="cases" className="bg-white">
+    <Section id="cases" className="bg-white bg-dot">
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 md:mb-16">
         <div className="max-w-2xl">
           <SectionHeader

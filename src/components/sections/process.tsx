@@ -28,7 +28,7 @@ const steps = [
 
 export function Process() {
   return (
-    <Section className="bg-brand-surface">
+    <Section className="bg-brand-surface bg-dot">
       <SectionHeader
         eyebrow="Our Process"
         title="A workflow built on precision at every step"

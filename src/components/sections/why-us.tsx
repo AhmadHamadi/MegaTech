@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Section, SectionHeader } from "@/components/ui/section";
+import { Section } from "@/components/ui/section";
 
 const reasons = [
   {
@@ -38,40 +38,61 @@ const reasons = [
 
 export function WhyUs() {
   return (
-    <Section id="why-us" className="bg-brand-surface">
-      <SectionHeader
-        eyebrow="Why MEGATACH"
-        title="Six reasons patients and dentists choose us"
-        description="From the first consultation to the final fitting, every step is designed around precision, comfort, and your time."
+    <Section id="why-us" className="bg-brand-ink text-white relative overflow-hidden">
+      <div
+        className="absolute -top-40 -right-40 h-[500px] w-[500px] rounded-full opacity-15 blur-3xl"
+        style={{ background: "radial-gradient(circle, #29B1C5 0%, transparent 70%)" }}
+        aria-hidden
       />
-      <div className="grid gap-4 md:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {reasons.map((r) => (
-          <div
-            key={r.n}
-            className="group relative rounded-2xl bg-white p-7 md:p-8 ring-1 ring-brand-line hover:ring-brand-teal hover:shadow-xl transition-all"
-          >
-            <div className="font-display text-5xl md:text-6xl font-semibold text-brand-teal/15 group-hover:text-brand-teal/30 transition-colors leading-none">
-              {r.n}
-            </div>
-            <h3 className="mt-3 font-display text-xl font-semibold text-brand-ink">
-              {r.title}
-            </h3>
-            <p className="mt-3 text-muted-foreground text-pretty leading-relaxed">
-              {r.body}
-            </p>
+      <div
+        className="absolute -bottom-40 -left-40 h-[400px] w-[400px] rounded-full opacity-10 blur-3xl"
+        style={{ background: "radial-gradient(circle, #29B1C5 0%, transparent 70%)" }}
+        aria-hidden
+      />
+
+      <div className="relative">
+        <div className="max-w-2xl mb-12 md:mb-16">
+          <div className="mb-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
+            <span className="h-px w-8 bg-brand-teal" />
+            Why MEGATACH
           </div>
-        ))}
-      </div>
-      <div className="mt-12 flex flex-col sm:flex-row sm:items-center gap-4 justify-center text-center">
-        <Button asChild variant="accent" size="lg">
-          <Link href="#book">
-            Start with a free consultation
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-        </Button>
-        <span className="text-sm text-muted-foreground">
-          No referral needed · CDCP accepted
-        </span>
+          <h2 className="font-display text-3xl md:text-5xl font-semibold text-balance text-white">
+            Six reasons patients and dentists choose us
+          </h2>
+          <p className="mt-5 text-lg text-white/70 text-pretty leading-relaxed">
+            From the first consultation to the final fitting, every step is
+            designed around precision, comfort, and your time.
+          </p>
+        </div>
+
+        <div className="grid gap-4 md:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {reasons.map((r) => (
+            <div
+              key={r.n}
+              className="group relative rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur p-7 md:p-8 hover:bg-white/[0.07] hover:ring-brand-teal/40 transition-all"
+            >
+              <div className="font-display text-5xl md:text-6xl font-semibold text-brand-teal/40 group-hover:text-brand-teal/60 transition-colors leading-none">
+                {r.n}
+              </div>
+              <h3 className="mt-3 font-display text-xl font-semibold text-white">
+                {r.title}
+              </h3>
+              <p className="mt-3 text-white/70 text-pretty leading-relaxed">{r.body}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12 flex flex-col sm:flex-row sm:items-center gap-4 justify-center text-center">
+          <Button asChild variant="accent" size="lg">
+            <Link href="#book">
+              Start with a free consultation
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </Button>
+          <span className="text-sm text-white/60">
+            No referral needed · CDCP accepted
+          </span>
+        </div>
       </div>
     </Section>
   );

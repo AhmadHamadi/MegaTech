@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export function BookSection() {
   return (
-    <Section id="book" className="bg-white">
+    <Section id="book" className="bg-gradient-to-br from-brand-surface via-white to-brand-teal/5">
       <div className="rounded-3xl bg-brand-surface ring-1 ring-brand-line p-6 md:p-10 lg:p-14">
         <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
           <div className="lg:col-span-3">
