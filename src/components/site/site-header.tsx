@@ -12,16 +12,20 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-brand-line/60 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/70">
-      <div className="container flex h-16 md:h-20 items-center justify-between">
-        <Link href="/" className="flex items-center gap-3" aria-label={siteConfig.name}>
+    <header className="sticky top-0 z-50 w-full border-b border-brand-line/60 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/80">
+      <div className="container flex h-24 md:h-28 items-center justify-between gap-4">
+        <Link
+          href="/"
+          className="flex items-center transition-opacity hover:opacity-80 py-2"
+          aria-label={siteConfig.name}
+        >
           <Image
             src="/brand/logo.png"
             alt={siteConfig.name}
-            width={200}
-            height={56}
+            width={520}
+            height={174}
             priority
-            className="h-9 md:h-11 w-auto"
+            className="h-14 md:h-20 w-auto"
           />
         </Link>
 

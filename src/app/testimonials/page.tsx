@@ -16,7 +16,7 @@ export default function TestimonialsPage() {
       <PageHeader
         eyebrow="Reviews"
         title="What our patients say"
-        description="Over 200 5-star Google reviews from patients across the Greater Toronto Area and dental professionals across Ontario."
+        description="Over 200 5-star patient reviews from across the Greater Toronto Area, plus testimonials from dental professionals we partner with across Ontario."
       />
       <Section className="bg-white">
         <div className="max-w-2xl mb-12 mx-auto text-center">
@@ -28,7 +28,7 @@ export default function TestimonialsPage() {
             </div>
             <span className="font-display text-2xl font-semibold text-brand-ink">4.9 / 5</span>
           </div>
-          <p className="mt-3 text-muted-foreground">Average rating across 200+ Google reviews</p>
+          <p className="mt-3 text-muted-foreground">Average rating across 200+ patient reviews</p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">

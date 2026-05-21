@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
 
 const steps = [
@@ -50,6 +53,14 @@ export function Process() {
             ) : null}
           </div>
         ))}
+      </div>
+      <div className="mt-12 text-center">
+        <Button asChild variant="default" size="lg">
+          <Link href="#book">
+            Begin your journey
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </Button>
       </div>
     </Section>
   );

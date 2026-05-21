@@ -50,7 +50,7 @@ export function Testimonials() {
             ))}
           </div>
           <span className="text-white/70 text-sm">
-            4.9/5 from 200+ Google reviews
+            4.9/5 from 200+ patient reviews
           </span>
         </div>
       </div>

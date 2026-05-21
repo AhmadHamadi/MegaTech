@@ -9,13 +9,13 @@ export function SiteFooter() {
     <footer className="bg-brand-ink text-white/80">
       <div className="container py-16 md:py-20 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="bg-white inline-block p-3 rounded-xl">
+          <div className="bg-white inline-block p-5 rounded-2xl shadow-lg">
             <Image
               src="/brand/logo.png"
               alt={siteConfig.name}
-              width={200}
-              height={56}
-              className="h-10 w-auto"
+              width={520}
+              height={174}
+              className="h-14 md:h-16 w-auto"
             />
           </div>
           <p className="mt-6 text-sm leading-relaxed text-white/70">
