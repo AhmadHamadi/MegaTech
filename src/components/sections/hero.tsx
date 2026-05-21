@@ -78,10 +78,10 @@ export function Hero() {
         <div className="relative mt-12 md:mt-16 animate-fade-up [animation-delay:200ms]">
           <div className="relative max-w-6xl mx-auto rounded-3xl overflow-hidden shadow-2xl ring-1 ring-brand-line">
             <Image
-              src={IMG.heroTeam}
-              alt="The MEGATACH Dental Lab team"
-              width={1195}
-              height={699}
+              src={IMG.heroLabBench}
+              alt="MEGATACH denturist hand-finishing a dental prosthesis on an articulator"
+              width={1224}
+              height={816}
               priority
               sizes="(max-width: 1280px) 100vw, 1152px"
               className="w-full h-auto"
