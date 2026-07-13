@@ -5,16 +5,35 @@ export const runtime = "edge";
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { name, phone, email, service, message } = body ?? {};
+    const {
+      type, // "contact" (default) or "pickup"
+      name,
+      phone,
+      email,
+      service,
+      message,
+      // pickup-specific extras
+      clinic,
+      address,
+      pickupTime,
+    } = body ?? {};
 
     if (!name || !phone || !email || !service) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
-    // TODO: Wire to Resend, SendGrid, or your CRM.
-    // For now we log to the server and return success so the form is functional
-    // out-of-the-box. Add RESEND_API_KEY to .env.local to enable real delivery.
-    console.log("[contact]", { name, phone, email, service, message });
+    // TODO: Wire to Resend, SendGrid, or your CRM. A pickup request should also
+    // trigger an instant notification (email/SMS/Slack) to the front desk and
+    // driver — add RESEND_API_KEY (or a webhook URL) to .env.local to enable it.
+    const kind = type === "pickup" ? "pickup" : "contact";
+    console.log(`[${kind}]`, {
+      name,
+      phone,
+      email,
+      service,
+      message,
+      ...(kind === "pickup" ? { clinic, address, pickupTime } : {}),
+    });
 
     return NextResponse.json({ ok: true });
   } catch {

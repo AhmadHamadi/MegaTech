@@ -1,34 +1,36 @@
+// Clinic-facing FAQs. MEGATECH is a B2B dental lab — questions are written
+// for the dentist / practice deciding to send us cases, not for patients.
 export const homeFaqs = [
   {
-    q: "How much do dentures cost in Ontario?",
-    a: "Costs depend on the type and complexity. As a general guideline: complete dentures range from $1,500–$3,500 per arch, partial dentures from $900–$2,500, and implant-supported dentures from $4,000–$7,000 per arch. We provide transparent quotes during your free consultation and follow the Denturist Association of Ontario fee guide.",
+    q: "How do we send a case to MEGATECH?",
+    a: "Three ways: request a pickup through this site, call us, or hand cases to our driver on a scheduled run. We collect impressions, models, and prescriptions directly from your clinic and return finished work on our delivery routes across the GTA.",
   },
   {
-    q: "Does the Canadian Dental Care Plan (CDCP) cover dentures at MEGATACH?",
-    a: "Yes. MEGATACH is a registered CDCP provider. The CDCP covers complete and partial dentures for eligible seniors, children, and adults with valid Disability Tax Credits. We handle the paperwork and direct billing — you focus on your smile.",
+    q: "Do you accept digital scans, or only physical impressions?",
+    a: "Both. We accept STL/PLY files from all major intraoral scanners (iTero, Trios, Medit, and others) as well as conventional impressions and models collected on our pickup runs.",
   },
   {
-    q: "How long does it take to get a new denture?",
-    a: "Most complete dentures take 4–6 weeks across 3–5 appointments. Partial dentures typically take 3–4 weeks. Immediate dentures can be ready in days for placement on the same day as your extractions.",
+    q: "What is your typical turnaround time?",
+    a: "Most complete and partial dentures ship back within 7–10 working days, built around your appointment schedule. Repairs are usually same-day, and relines within 24 hours, returned on our delivery runs.",
   },
   {
-    q: "Will my dentures look natural?",
-    a: "Yes. We hand-characterize teeth shade, translucency, and gum tissue colour so your prosthetics are indistinguishable from natural dentition. Bring a photo of your previous smile or family member's teeth and we'll match it.",
+    q: "Which implant systems are you compatible with?",
+    a: "All major systems — including Straumann, Nobel Biocare, BioHorizons, Zimmer Biomet, and Neodent. Provide the system and platform with your prescription and we'll match the correct components.",
   },
   {
-    q: "How quickly can you repair a broken denture?",
-    a: "Most fracture repairs are completed same-day in our in-house lab. Drop off your denture before noon and we'll have it ready by 5 PM. For loose-fitting dentures, hard and soft relines are typically completed within 24 hours.",
+    q: "What does the pickup and delivery service cover?",
+    a: "We run scheduled pickup and delivery routes across Toronto and the Greater Toronto Area at no extra charge to partner clinics. Have a case ready? Request a pickup on this site and our driver or front desk is notified right away.",
   },
   {
-    q: "Do I need a referral from a dentist?",
-    a: "No. Denturists in Ontario are primary-care providers — you can book directly with MEGATACH without a dentist referral. If you already work with a dentist, we're happy to coordinate care.",
+    q: "Do you handle remakes and adjustments?",
+    a: "Yes. Every case is backed by our fabrication warranty, and we handle remakes and adjustments promptly. If a case needs reworking, it's collected and returned on the next available run.",
   },
   {
-    q: "What insurance plans do you accept?",
-    a: "We accept all major Ontario benefit plans including Sun Life, Manulife, Great-West, Canada Life, Green Shield, Blue Cross, and CDCP. We can submit claims directly to your insurer on your behalf.",
+    q: "Can you white-label work for our practice?",
+    a: "Absolutely. We work behind the scenes as your lab partner — all prostheses and appliances are fabricated to your prescription and delivered ready for your team to fit.",
   },
   {
-    q: "How long do dentures last?",
-    a: "Well-cared-for dentures typically last 7–10 years. Soft tissues and bone change over time, so periodic relines every 3–5 years keep them fitting comfortably. Every MEGATACH denture is backed by our 5-year manufacturer warranty.",
+    q: "How do we set up a partner account?",
+    a: "Get in touch through this site or give us a call. We'll set your practice up with a pickup schedule, prescription forms, and a direct line to the lab — usually within a day.",
   },
 ] as const;

@@ -7,25 +7,25 @@ import { IMG } from "@/lib/images";
 
 const cases = [
   {
-    image: IMG.dentureModel,
-    tag: "Implant-Supported",
-    title: "Full-arch hybrid prosthesis",
+    image: IMG.implantModel,
+    tag: "Implant Prosthetics",
+    title: "Full-arch hybrid framework",
     body:
-      "All-on-4 hybrid for a patient transitioning from failing dentition. Designed in CAD, milled in-house, delivered in 4 weeks.",
+      "All-on-4 hybrid prescribed by a partner clinic. Designed in CAD from their scan, milled in-house, and delivered in four weeks.",
   },
   {
     image: IMG.partialModel,
     tag: "Partial Denture",
     title: "Cast-frame partial with precision attachments",
     body:
-      "Cobalt-chrome partial replacing 3 lower teeth. Custom hand-bent clasps for an invisible smile line.",
+      "Cobalt-chrome partial replacing three lower teeth. Custom hand-bent clasps for an invisible smile line.",
   },
   {
-    image: IMG.dentistExam,
+    image: IMG.dentureModel,
     tag: "Complete Denture",
     title: "Upper complete with natural characterization",
     body:
-      "Premium acrylic upper with hand-painted gum tissue. The patient brought a photo of their natural smile — we matched it.",
+      "Premium acrylic upper with hand-painted gum tissue, matched to the shade and reference photos supplied with the prescription.",
   },
 ];
 
@@ -37,12 +37,12 @@ export function FeaturedCases() {
           <SectionHeader
             chapter={{ number: "05", label: "Recent Work" }}
             title="Three cases, three different solutions"
-            description="Every patient is different — and every prosthesis we make is built specifically for the person it belongs to."
+            description="Every prescription is different — and every case we fabricate is built specifically for the patient it belongs to."
           />
         </div>
         <Button asChild variant="outline">
           <Link href="/gallery">
-            View Full Gallery
+            View Our Work
             <ArrowRight className="h-4 w-4" />
           </Link>
         </Button>

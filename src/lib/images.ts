@@ -8,7 +8,7 @@ const u = (id: string, w = 1600, q = 80) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=${q}`;
 
 export const IMG = {
-  // Local user-supplied hero — denturist working at the lab bench
+  // Local user-supplied hero — technician working at the lab bench
   heroLabBench: "/brand/hero3.jpg",
   heroTeam: "/brand/hero1.png",
   heroCraft: u("1776406987595-ba14f3510c07"),

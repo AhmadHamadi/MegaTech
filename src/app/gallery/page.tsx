@@ -6,30 +6,27 @@ import { Cta } from "@/components/sections/cta";
 import { IMG } from "@/lib/images";
 
 export const metadata: Metadata = {
-  title: "Smile Gallery",
+  title: "Our Work",
   description:
-    "A gallery of real cases — from complete dentures to implant-supported prosthetics — crafted at MEGATACH Dental Lab.",
+    "A gallery of real cases — from complete dentures to implant prosthetics and custom appliances — fabricated at MEGATECH Dental Lab for partner clinics.",
 };
 
 const images = [
-  { src: IMG.dentistExam, caption: "Complete denture — natural shade match" },
-  { src: IMG.implantModel, caption: "Implant-supported prosthesis" },
-  { src: IMG.dentureModel, caption: "Full denture — hand-characterized" },
-  { src: IMG.dentistTreating, caption: "Patient fitting appointment" },
-  { src: IMG.partialModel, caption: "Partial denture — precision fit check" },
-  { src: IMG.dentalLab, caption: "Inside the MEGATACH lab" },
-  { src: IMG.operatoryTeal, caption: "Our consultation operatory" },
-  { src: IMG.xrayReview, caption: "Digital imaging review" },
-  { src: IMG.clinicInterior, caption: "Modern clinic environment" },
+  { src: IMG.dentureModel, caption: "Complete denture — hand-characterized shade match" },
+  { src: IMG.implantModel, caption: "Implant prosthesis — milled framework" },
+  { src: IMG.partialModel, caption: "Cast-frame partial — precision fit" },
+  { src: IMG.aligner, caption: "Custom night guard — dual-laminate" },
+  { src: IMG.dentalLab, caption: "Inside the MEGATECH lab" },
+  { src: IMG.heroLabBench, caption: "Hand-finishing a case at the bench" },
 ];
 
 export default function GalleryPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Smile Gallery"
-        title="Real cases. Real smiles."
-        description="A selection of dentures, partials, implant prosthetics, and repairs crafted in our Toronto lab. Every prosthesis is custom-designed to match the patient's anatomy, shade, and lifestyle."
+        eyebrow="Our Work"
+        title="Real cases from our bench"
+        description="A selection of dentures, partials, implant prosthetics, and custom appliances fabricated in our Toronto lab. Every case is built to the prescription — matched to the patient's anatomy, shade, and bite."
       />
       <Section className="bg-white">
         <div className="grid gap-4 md:gap-6 sm:grid-cols-2 lg:grid-cols-3">

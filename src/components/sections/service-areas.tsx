@@ -26,9 +26,9 @@ export function ServiceAreas() {
       <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-16 items-center">
         <div>
           <SectionHeader
-            chapter={{ number: "07", label: "Service Areas" }}
-            title="Proudly serving the Greater Toronto Area"
-            description="From our Toronto lab, we serve patients across the GTA and partner with dental practices throughout Ontario. Free consultations, easy parking, TTC-accessible."
+            chapter={{ number: "07", label: "Pickup & Delivery Areas" }}
+            title="Pickup & delivery across the GTA"
+            description="From our Toronto lab, we run scheduled pickup and delivery routes for partner clinics throughout the Greater Toronto Area — collection and return at no extra charge."
           />
           <div className="inline-flex items-center gap-3 rounded-2xl bg-brand-surface ring-1 ring-brand-line px-5 py-4">
             <div className="h-10 w-10 rounded-full bg-brand-teal/10 flex items-center justify-center">
@@ -45,8 +45,8 @@ export function ServiceAreas() {
           </div>
           <div className="mt-8">
             <Button asChild variant="accent">
-              <Link href="#book">
-                Book your visit
+              <Link href="#pickup">
+                Request a pickup
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>

@@ -10,13 +10,14 @@ export function BookSection() {
       <div className="rounded-3xl bg-brand-surface ring-1 ring-brand-line p-6 md:p-10 lg:p-14">
         <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
           <div className="lg:col-span-3">
-            <ChapterMark number="09" label="Book a Consultation" />
+            <ChapterMark number="09" label="Partner With Us" />
             <h2 className="font-display text-3xl md:text-5xl font-semibold text-brand-ink text-balance leading-[1.05] tracking-tight">
-              Ready to restore your smile?
+              Make MEGATECH your lab.
             </h2>
             <p className="mt-4 text-lg text-muted-foreground text-pretty">
-              Tell us a little about what you need and we&apos;ll respond
-              within 24 hours. Consultations are always free.
+              New to working with us? Tell us about your practice and we&apos;ll
+              set you up with a pickup schedule and a direct line to the lab —
+              usually within a day.
             </p>
             <div className="mt-8">
               <ContactForm />
@@ -68,10 +69,13 @@ export function BookSection() {
             <div className="rounded-2xl bg-brand-ink p-6 text-white">
               <p className="text-sm text-white/80 leading-relaxed">
                 <span className="font-semibold text-white">
-                  Need a same-day repair?
+                  Already a partner with a case ready?
                 </span>{" "}
-                Drop off your denture before noon and we&apos;ll have it ready
-                by 5 PM — no appointment needed.
+                Skip the form —{" "}
+                <a href="#pickup" className="text-brand-teal underline">
+                  request a pickup
+                </a>{" "}
+                and our team is notified instantly.
               </p>
             </div>
           </aside>

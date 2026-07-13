@@ -68,8 +68,8 @@ export default async function ServiceDetailPage({ params }: Props) {
 
             <div className="mt-10 flex flex-wrap gap-4">
               <Button asChild variant="accent" size="lg">
-                <Link href="/contact">
-                  Book a Consultation
+                <Link href="/#pickup">
+                  Request a Pickup
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>

@@ -11,14 +11,13 @@ const routes = [
   { name: "01-services", path: "/services" },
   { name: "02-svc-complete", path: "/services/complete-dentures" },
   { name: "03-svc-partial", path: "/services/partial-dentures" },
-  { name: "04-svc-implant", path: "/services/implant-supported" },
-  { name: "05-svc-immediate", path: "/services/immediate-dentures" },
+  { name: "04-svc-implant", path: "/services/implant-prosthetics" },
+  { name: "05-svc-guards", path: "/services/night-guards-appliances" },
   { name: "06-svc-relines", path: "/services/relines-repairs" },
   { name: "07-gallery", path: "/gallery" },
-  { name: "08-testimonials", path: "/testimonials" },
-  { name: "09-about", path: "/about" },
-  { name: "10-contact", path: "/contact" },
-  { name: "11-not-found", path: "/this-page-does-not-exist" },
+  { name: "08-about", path: "/about" },
+  { name: "09-contact", path: "/contact" },
+  { name: "10-not-found", path: "/this-page-does-not-exist" },
 ];
 
 const mobile = [

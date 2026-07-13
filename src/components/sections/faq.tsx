@@ -24,8 +24,8 @@ export function FaqSection() {
       />
       <SectionHeader
         chapter={{ number: "08", label: "Common Questions" }}
-        title="Answers to common denture questions"
-        description="Everything you need to know about dentures, costs, CDCP coverage, repairs, and the MEGATACH process — straight from our denturists."
+        title="Answers for partner clinics"
+        description="How to send cases, turnaround times, implant compatibility, pickup and delivery, and getting set up — everything your practice needs to know."
       />
       <div className="max-w-3xl space-y-3">
         {homeFaqs.map((faq) => (
@@ -56,13 +56,13 @@ export function FaqSection() {
               Still have questions?
             </h3>
             <p className="text-sm text-muted-foreground">
-              Talk to a denturist directly — no obligation, no pressure.
+              Talk to our lab team directly — no obligation, no pressure.
             </p>
           </div>
         </div>
         <div className="flex flex-col sm:flex-row gap-3">
           <Button asChild variant="accent">
-            <Link href="#book">Book a consultation</Link>
+            <Link href="#book">Partner with us</Link>
           </Button>
           <Button asChild variant="outline">
             <Link href={siteConfig.phoneHref}>

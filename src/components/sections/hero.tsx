@@ -24,20 +24,20 @@ export function Hero() {
             </div>
 
             <h1 className="mt-6 font-display text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[3.75rem] xl:text-[4.25rem] font-semibold leading-[1.05] text-brand-ink text-balance tracking-tight">
-              Precision dentures,{" "}
-              <span className="gradient-text">crafted with care.</span>
+              The precision dental lab{" "}
+              <span className="gradient-text">behind your clinic.</span>
             </h1>
 
             <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-xl text-pretty leading-relaxed">
-              Custom dentures, repairs, relines, and implant-supported
-              prosthetics — engineered with digital precision and finished by
-              hand in our Toronto lab.
+              Dentures, night guards, orthotic appliances, and implant
+              prosthetics — fabricated to your prescription and returned on our
+              scheduled pickup and delivery runs across the GTA.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4">
               <Button asChild variant="accent" size="lg">
-                <Link href="#book">
-                  Book a Free Consultation
+                <Link href="#pickup">
+                  Request a Pickup
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
@@ -50,11 +50,11 @@ export function Hero() {
             </div>
 
             <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
-              <span className="font-medium text-brand-ink">No referral needed</span>
+              <span className="font-medium text-brand-ink">Free pickup &amp; delivery</span>
               <span className="text-brand-ink/20">·</span>
-              <span className="font-medium text-brand-ink">CDCP accepted</span>
+              <span className="font-medium text-brand-ink">7–10 day turnaround</span>
               <span className="text-brand-ink/20">·</span>
-              <span className="font-medium text-brand-ink">Free consultation</span>
+              <span className="font-medium text-brand-ink">All implant systems</span>
             </div>
           </div>
 
@@ -63,7 +63,7 @@ export function Hero() {
             <div className="relative aspect-[3/2] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-brand-line">
               <Image
                 src={IMG.heroLabBench}
-                alt="MEGATACH denturist hand-finishing a dental prosthesis on an articulator"
+                alt="MEGATECH technician hand-finishing a dental prosthesis on an articulator"
                 fill
                 priority
                 quality={100}
@@ -81,7 +81,7 @@ export function Hero() {
                 <p className="text-sm font-semibold text-brand-ink leading-tight">
                   Same-Day Repairs
                 </p>
-                <p className="text-xs text-muted-foreground">Drop-in service</p>
+                <p className="text-xs text-muted-foreground">Collected on pickup</p>
               </div>
             </div>
 

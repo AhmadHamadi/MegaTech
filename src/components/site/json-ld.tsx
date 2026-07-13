@@ -3,7 +3,7 @@ import { siteConfig } from "@/lib/site-config";
 export function LocalBusinessJsonLd() {
   const data = {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "MedicalBusiness"],
+    "@type": ["LocalBusiness", "MedicalBusiness", "DentalLaboratory"],
     name: siteConfig.name,
     description: siteConfig.description,
     url: siteConfig.url,
@@ -32,7 +32,8 @@ export function LocalBusinessJsonLd() {
       },
     ],
     priceRange: "$$",
-    medicalSpecialty: ["Prosthodontics", "Denturism"],
+    medicalSpecialty: ["Prosthodontics"],
+    areaServed: "Greater Toronto Area",
   };
   return (
     <script

@@ -27,11 +27,14 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: [
     "dental lab Toronto",
-    "denture clinic Ontario",
-    "implant dentures",
+    "dental laboratory Ontario",
+    "denture lab for clinics",
+    "implant prosthetics lab",
+    "night guards lab",
     "denture repairs",
     "partial dentures",
-    "MEGATACH",
+    "dental lab pickup delivery GTA",
+    "MEGATECH",
   ],
   authors: [{ name: siteConfig.name }],
   openGraph: {
@@ -47,9 +50,8 @@ export const metadata: Metadata = {
     title: `${siteConfig.name} — ${siteConfig.tagline}`,
     description: siteConfig.description,
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
+  // Favicon + apple touch icon are auto-detected from app/icon.png and
+  // app/apple-icon.png (generated from the brand logo by scripts/gen-logo.mjs).
 };
 
 export const viewport: Viewport = {

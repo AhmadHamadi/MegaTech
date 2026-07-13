@@ -7,32 +7,32 @@ const reasons = [
   {
     n: "01",
     title: "In-House Dental Lab",
-    body: "Every prosthesis is designed, milled, and finished under one roof — no outsourcing, no delays, no compromise on quality.",
+    body: "Every case is designed, milled, and finished under one roof — no outsourcing offshore, no lost weeks, no compromise on quality.",
   },
   {
     n: "02",
     title: "Master Craftsmanship",
-    body: "Each denture is hand-characterized by certified denturists with 20+ years of experience for results that look indistinguishably natural.",
+    body: "Each prosthesis is hand-characterized by technicians with 20+ years of experience, for results that fit and look indistinguishably natural.",
   },
   {
     n: "03",
     title: "Digital Precision",
-    body: "Intraoral scanning, CAD design, and CNC milling — modern workflows that capture your anatomy with sub-millimetre accuracy.",
+    body: "Send a scan or an impression — CAD design and CNC milling capture the anatomy to sub-millimetre accuracy either way.",
   },
   {
     n: "04",
-    title: "Same-Day Repairs",
-    body: "Broken denture? Drop it off before noon and we'll have it back to you by 5 PM. Loose fit? Most relines done within 24 hours.",
+    title: "Pickup & Delivery",
+    body: "Scheduled, no-charge collection and return across the GTA. Have a case ready? Request a pickup and our team is notified instantly.",
   },
   {
     n: "05",
-    title: "CDCP & Insurance",
-    body: "Registered Canadian Dental Care Plan provider. We work with Sun Life, Manulife, Great-West, and all major Ontario benefit plans.",
+    title: "Fast Turnaround",
+    body: "Most dentures ship back in 7–10 working days. Repairs are usually same-day, with relines returned within 24 hours.",
   },
   {
     n: "06",
-    title: "5-Year Warranty",
-    body: "Every denture we build is backed by a 5-year manufacturer warranty against defects — peace of mind built into every smile.",
+    title: "Fabrication Warranty",
+    body: "Every case we build is backed by our warranty against defects, with prompt remakes and adjustments handled on our runs.",
   },
 ];
 
@@ -47,9 +47,9 @@ export function WhyUs() {
 
       <div className="relative">
         <SectionHeader
-          chapter={{ number: "02", label: "Why MEGATACH" }}
-          title="Six reasons patients and dentists choose us"
-          description="From the first consultation to the final fitting, every step is designed around precision, comfort, and your time."
+          chapter={{ number: "02", label: "Why MEGATECH" }}
+          title="Six reasons clinics make us their lab"
+          description="From the case you send to the work we return, every step is built around precision, speed, and making your practice's life easier."
           tone="paper"
         />
 
@@ -72,13 +72,13 @@ export function WhyUs() {
 
         <div className="mt-12 flex flex-col sm:flex-row sm:items-center gap-4 justify-center text-center">
           <Button asChild variant="accent" size="lg">
-            <Link href="#book">
-              Start with a free consultation
+            <Link href="#pickup">
+              Request a pickup
               <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>
           <span className="text-sm text-white/60">
-            No referral needed · CDCP accepted
+            Free pickup &amp; delivery across the GTA
           </span>
         </div>
       </div>

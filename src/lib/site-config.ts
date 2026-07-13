@@ -1,13 +1,13 @@
 export const siteConfig = {
-  name: "MEGATACH Dental Lab",
-  shortName: "MEGATACH",
+  name: "MEGATECH Dental Lab",
+  shortName: "MEGATECH",
   tagline: "Precision. Technology. Excellence.",
   description:
-    "Ontario-based dental laboratory specializing in precision dentures, repairs, relines, and implant-supported prosthetics. Trusted by dental professionals and patients across the GTA.",
+    "Ontario dental laboratory fabricating precision dentures, night guards, orthotic appliances, and implant prosthetics for dental clinics — with scheduled pickup and delivery across the GTA.",
   url: "https://megatachdentallab.com",
   email: "info@megatachdentallab.com",
-  phone: "(416) 555-0100",
-  phoneHref: "tel:+14165550100",
+  phone: "(905) 208-9191",
+  phoneHref: "tel:+19052089191",
   address: {
     street: "Suite 200",
     city: "Toronto",
@@ -27,8 +27,9 @@ export const siteConfig = {
   },
   nav: [
     { label: "Services", href: "/services" },
-    { label: "Gallery", href: "/gallery" },
+    { label: "Our Work", href: "/gallery" },
     { label: "About", href: "/about" },
+    { label: "Request a Pickup", href: "/#pickup" },
     { label: "Contact", href: "/contact" },
   ],
 } as const;

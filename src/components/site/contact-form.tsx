@@ -36,8 +36,8 @@ export function ContactForm() {
           Thanks — we got it.
         </h3>
         <p className="mt-3 text-muted-foreground">
-          One of our denturists will respond within 24 hours. For urgent
-          repairs, call us directly during business hours.
+          Our lab team will respond within 24 hours. For anything urgent, call
+          us directly during business hours.
         </p>
         <Button
           variant="outline"
@@ -59,7 +59,7 @@ export function ContactForm() {
           name="phone"
           type="tel"
           required
-          placeholder="(416) 555-0100"
+          placeholder="(905) 208-9191"
         />
       </div>
       <Field
@@ -81,14 +81,15 @@ export function ContactForm() {
           className="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-sm text-brand-ink focus:border-brand-teal focus:outline-none focus:ring-2 focus:ring-brand-teal/30"
         >
           <option value="" disabled>
-            Select a service
+            Select a topic
           </option>
+          <option value="New partner enquiry">Become a partner clinic</option>
           {services.map((s) => (
             <option key={s.slug} value={s.title}>
               {s.title}
             </option>
           ))}
-          <option value="Consultation">General Consultation</option>
+          <option value="Pricing & turnaround">Pricing &amp; turnaround</option>
           <option value="Other">Something else</option>
         </select>
       </div>
@@ -100,7 +101,7 @@ export function ContactForm() {
         <textarea
           name="message"
           rows={4}
-          placeholder="Tell us a bit about your situation, timeline, or any questions..."
+          placeholder="Tell us about your practice, the work you send out, and your timeline..."
           className="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-sm text-brand-ink focus:border-brand-teal focus:outline-none focus:ring-2 focus:ring-brand-teal/30 resize-none"
         />
       </div>
@@ -110,8 +111,8 @@ export function ContactForm() {
           <AlertCircle className="h-5 w-5 flex-shrink-0 mt-0.5" />
           <p>
             Something went wrong sending your message. Please try again or call us at{" "}
-            <a href="tel:+14165550100" className="underline font-medium">
-              (416) 555-0100
+            <a href="tel:+19052089191" className="underline font-medium">
+              (905) 208-9191
             </a>
             .
           </p>

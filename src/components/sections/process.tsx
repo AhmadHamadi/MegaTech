@@ -6,23 +6,23 @@ import { Section, SectionHeader } from "@/components/ui/section";
 const steps = [
   {
     n: "01",
-    title: "Consultation",
-    body: "We assess your needs in a relaxed, no-pressure visit and discuss the right prosthetic options for your case.",
+    title: "Request a Pickup",
+    body: "Send your scan or impression with a prescription, or request a pickup and our driver collects the case from your clinic.",
   },
   {
     n: "02",
-    title: "Digital Impressions",
-    body: "Using intraoral scanning and CAD design, we capture your anatomy with sub-millimetre precision.",
+    title: "Design & Approval",
+    body: "We CAD-design the case to your prescription and share previews where needed, so nothing is milled before you sign off.",
   },
   {
     n: "03",
     title: "Hand-Finished Build",
-    body: "Master technicians characterize teeth and gum tissue for a result that looks indistinguishably natural.",
+    body: "Master technicians mill and characterize teeth and gum tissue for a result that fits and looks indistinguishably natural.",
   },
   {
     n: "04",
-    title: "Fit & Follow-up",
-    body: "We deliver, adjust, and follow up — backed by a 5-year warranty and complimentary annual check-ins.",
+    title: "Delivered to Your Clinic",
+    body: "The finished case is returned on our delivery run, ready for your team to fit — backed by our fabrication warranty.",
   },
 ];
 
@@ -30,9 +30,9 @@ export function Process() {
   return (
     <Section className="bg-white">
       <SectionHeader
-        chapter={{ number: "04", label: "Our Process" }}
-        title="A workflow built on precision at every step"
-        description="Modern digital tools paired with old-world craftsmanship — that's how we deliver prosthetics that fit, function, and last."
+        chapter={{ number: "04", label: "How It Works" }}
+        title="From your prescription to your front desk"
+        description="Four simple steps — and our pickup and delivery handle the legwork at both ends, so your team never has to chase a case."
       />
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -57,8 +57,8 @@ export function Process() {
 
       <div className="mt-12 text-center">
         <Button asChild variant="default" size="lg">
-          <Link href="#book">
-            Begin your journey
+          <Link href="#pickup">
+            Request a pickup
             <ArrowRight className="h-4 w-4" />
           </Link>
         </Button>

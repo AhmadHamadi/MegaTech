@@ -22,18 +22,18 @@ export function Cta() {
                 Get Started
               </div>
               <h2 className="font-display text-3xl md:text-5xl font-semibold text-white text-balance">
-                Ready to restore your smile?
+                Ready to make us your lab?
               </h2>
               <p className="mt-4 text-lg text-white/70 max-w-lg text-pretty">
-                Book a free consultation with our denturists. We&apos;ll assess
-                your needs, discuss your options, and provide a transparent
-                quote — no pressure, no surprises.
+                Tell us about your practice and we&apos;ll set you up with a
+                pickup schedule, prescription forms, and a direct line to the
+                lab — usually within a day.
               </p>
             </div>
             <div className="flex flex-col gap-4 md:items-end">
               <Button asChild variant="accent" size="lg" className="w-full md:w-auto">
                 <Link href="/contact">
-                  Book Free Consultation
+                  Partner With Us
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>

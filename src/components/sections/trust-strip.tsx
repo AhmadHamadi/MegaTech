@@ -1,10 +1,10 @@
-import { Award, BadgeCheck, Microscope, Users } from "lucide-react";
+import { Microscope, Truck, Clock, Layers } from "lucide-react";
 
 const items = [
-  { icon: BadgeCheck, label: "CDO Registered" },
-  { icon: Award, label: "CDCP Provider" },
   { icon: Microscope, label: "In-House Lab" },
-  { icon: Users, label: "5,000+ Smiles Restored" },
+  { icon: Truck, label: "Free Pickup & Delivery" },
+  { icon: Clock, label: "7–10 Day Turnaround" },
+  { icon: Layers, label: "All Major Implant Systems" },
 ];
 
 export function TrustStrip() {

@@ -22,10 +22,10 @@ export function SiteHeader() {
           <Image
             src="/brand/logo.png"
             alt={siteConfig.name}
-            width={520}
-            height={174}
+            width={400}
+            height={400}
             priority
-            className="h-14 md:h-20 w-auto"
+            className="h-16 md:h-20 w-auto"
           />
         </Link>
 
@@ -50,7 +50,7 @@ export function SiteHeader() {
             {siteConfig.phone}
           </a>
           <Button asChild variant="accent" size="sm">
-            <Link href="/contact">Book Consultation</Link>
+            <Link href="/#pickup">Request a Pickup</Link>
           </Button>
         </div>
 
@@ -82,8 +82,8 @@ export function SiteHeader() {
           ))}
           <div className="pt-4 flex flex-col gap-2">
             <Button asChild variant="accent">
-              <Link href="/contact" onClick={() => setOpen(false)}>
-                Book Consultation
+              <Link href="/#pickup" onClick={() => setOpen(false)}>
+                Request a Pickup
               </Link>
             </Button>
             <a

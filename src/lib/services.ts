@@ -10,39 +10,42 @@ export type Service = {
   faqs: { q: string; a: string }[];
 };
 
+// MEGATECH is a B2B dental laboratory. Every service below is a prosthesis or
+// appliance we FABRICATE for partner dental clinics — we do not perform any
+// in-mouth procedures. Copy is written for the dentist / clinic, not the patient.
 export const services: Service[] = [
   {
     slug: "complete-dentures",
     title: "Complete Dentures",
-    short: "Full upper and lower dentures crafted for a precise, natural fit.",
+    short: "Full upper and lower dentures fabricated to your prescription for a precise, natural fit.",
     description:
-      "Our complete dentures are custom-built using premium acrylics and digital workflows to deliver a comfortable fit, lifelike aesthetics, and dependable function — restoring confidence in every smile.",
+      "We fabricate complete dentures from your impressions or digital scans using premium acrylics and validated digital workflows — delivering a precise fit, lifelike characterization, and dependable function your patients can rely on.",
     bullets: [
-      "Premium acrylic and porcelain options",
-      "Digital impressions for precision fit",
-      "Natural shade and gum colour matching",
-      "5-year manufacturing warranty",
+      "Premium acrylic and porcelain tooth options",
+      "Works from physical impressions or digital scans",
+      "Hand-characterized shade and gum-tissue matching",
+      "5-year fabrication warranty against defects",
     ],
-    image: IMG.dentistExam,
+    image: IMG.dentureModel,
     faqs: [
       {
-        q: "How long does a complete denture take?",
-        a: "Typically 3–5 appointments over 4–6 weeks, depending on case complexity and adjustments needed.",
+        q: "What turnaround can we expect on a complete denture?",
+        a: "Standard cases ship back within 7–10 working days from receipt of impressions or scans, with scheduled try-in stages built around your appointment dates.",
       },
       {
-        q: "Will my dentures look natural?",
-        a: "Yes. We hand-characterize teeth and gum tissue so prosthetics look indistinguishable from natural dentition.",
+        q: "Do you accept digital scans?",
+        a: "Yes. We accept STL/PLY files from all major intraoral scanners, as well as conventional impressions collected on our scheduled pickup runs.",
       },
     ],
   },
   {
     slug: "partial-dentures",
     title: "Partial Dentures",
-    short: "Cast metal and flexible partials engineered to preserve remaining teeth.",
+    short: "Cast-metal and flexible partials engineered to preserve your patient's remaining dentition.",
     description:
-      "Whether you need a precision cast-frame partial or a flexible thermoplastic option, our partial dentures are designed to distribute load evenly, protect adjacent teeth, and stay invisible at the smile line.",
+      "From precision cast-frame partials to flexible thermoplastic options, we engineer each partial to distribute load evenly, protect abutment teeth, and stay invisible at the smile line — finished to your prescription.",
     bullets: [
-      "Cobalt-chrome cast framework",
+      "Cobalt-chrome cast frameworks",
       "Valplast / flexible thermoplastic options",
       "Precision attachments available",
       "Metal-free aesthetic clasps",
@@ -50,68 +53,68 @@ export const services: Service[] = [
     image: IMG.partialModel,
     faqs: [
       {
-        q: "Cast metal vs. flexible — which is better?",
-        a: "Cast metal is more rigid and long-lasting; flexible partials are lighter and more aesthetic. We recommend based on your case.",
+        q: "Cast metal vs. flexible — what do you recommend?",
+        a: "Cast metal is more rigid and long-lasting; flexible partials are lighter and more aesthetic. Send us the case details and we'll advise on the best framework for the prescription.",
       },
     ],
   },
   {
-    slug: "implant-supported",
-    title: "Implant-Supported Dentures",
-    short: "Snap-in and fixed full-arch solutions for unmatched stability.",
+    slug: "implant-prosthetics",
+    title: "Implant Prosthetics",
+    short: "Snap-in overdentures and fixed full-arch frameworks compatible with all major implant systems.",
     description:
-      "Implant-retained prosthetics eliminate denture movement, restore chewing force, and preserve jawbone health. We fabricate both removable overdentures and fixed full-arch hybrid prostheses.",
+      "We fabricate removable implant overdentures and fixed full-arch hybrid prostheses to your surgical plan — restoring stability and chewing force while remaining compatible with the implant system your practice uses.",
     bullets: [
-      "Locator and Ball attachments",
-      "All-on-4 / All-on-6 hybrid prostheses",
-      "Zirconia and titanium frameworks",
-      "Compatible with all major implant systems",
+      "Locator and Ball attachment overdentures",
+      "All-on-4 / All-on-6 hybrid frameworks",
+      "Zirconia and titanium milled bars",
+      "Compatible with Straumann, Nobel Biocare, BioHorizons & more",
     ],
     image: IMG.implantModel,
     faqs: [
       {
-        q: "Do I need surgery for implant dentures?",
-        a: "Yes — implants are surgically placed by an oral surgeon or periodontist. We coordinate directly with your dental team for the prosthetic phase.",
+        q: "Which implant systems do you support?",
+        a: "We work with all major systems including Straumann, Nobel Biocare, BioHorizons, Zimmer Biomet, and Neodent. Tell us the system and platform and we'll match the correct components.",
       },
     ],
   },
   {
-    slug: "immediate-dentures",
-    title: "Immediate Dentures",
-    short: "Walk in with teeth, walk out with teeth — same-day temporary dentures after extractions.",
+    slug: "night-guards-appliances",
+    title: "Night Guards & Orthotic Appliances",
+    short: "Bruxism guards, retainers, and custom orthotic appliances built from your models or scans.",
     description:
-      "Immediate dentures let you avoid going without teeth during the healing phase. We pre-fabricate your prosthesis before extraction day so it can be placed the moment your natural teeth are removed.",
+      "Beyond dentures, our lab fabricates a full range of custom appliances — hard and soft night guards for bruxism, retainers, sports mouthguards, and orthotic appliances — all built to your prescription from models or digital scans.",
     bullets: [
-      "Placed the same day as extractions",
-      "Pre-designed from impressions taken before surgery",
-      "Acts as a healing aid during gum recovery",
-      "Converts to permanent denture after 3–6 months",
+      "Hard, soft, and dual-laminate night guards",
+      "Bruxism / TMJ occlusal splints",
+      "Retainers and orthodontic appliances",
+      "Custom-fit sports and protective guards",
     ],
-    image: IMG.dentureModel,
+    image: IMG.aligner,
     faqs: [
       {
-        q: "Will the immediate denture be my final denture?",
-        a: "No. As your gums heal and shrink over 3–6 months, we reline or replace the immediate denture with a permanent one for a more precise fit.",
+        q: "Can you fabricate from a digital scan only?",
+        a: "Yes. Most guards and appliances can be produced from a digital scan alone — no physical impression required. Conventional models are equally welcome on our pickup runs.",
       },
     ],
   },
   {
     slug: "relines-repairs",
     title: "Relines & Repairs",
-    short: "Same-day repairs and professional relines that restore fit fast.",
+    short: "Fast lab-side repairs and professional relines that get appliances back to your clinic quickly.",
     description:
-      "Broken denture? Loose fit? Our in-house lab turns most repairs around the same day and relines within 24 hours — getting you back to eating, speaking, and smiling without delay.",
+      "Broken denture or loose fit? Our in-house lab turns most repairs around the same day and relines within 24 hours — collected and returned on our scheduled pickup and delivery runs so your patient isn't left waiting.",
     bullets: [
       "Same-day fracture repairs",
-      "Hard and soft relines (chairside or lab)",
+      "Hard and soft relines",
       "Tooth additions and re-bonding",
-      "Cleaning and polishing service",
+      "Collected and returned on our pickup runs",
     ],
-    image: IMG.dentistTreating,
+    image: IMG.dentalLab,
     faqs: [
       {
-        q: "How fast can you repair a broken denture?",
-        a: "Most fractures are repaired same-day. Drop off before noon and we'll have it ready by 5 PM.",
+        q: "How fast can you turn around a repair?",
+        a: "Most fractures are repaired same-day. Cases collected on a morning pickup are typically ready for return delivery the same afternoon.",
       },
     ],
   },

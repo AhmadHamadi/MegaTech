@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { Phone, Mail, MapPin, Clock, Shield } from "lucide-react";
+import Link from "next/link";
+import { Phone, Mail, MapPin, Clock, Truck } from "lucide-react";
 import { PageHeader } from "@/components/ui/page-header";
 import { Section } from "@/components/ui/section";
 import { ContactForm } from "@/components/site/contact-form";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Book a Free Consultation",
+  title: "Contact",
   description:
-    "Book a free consultation with MEGATACH Dental Lab. Same-day repairs, CDCP coverage, 24-hour response promise.",
+    "Get in touch with MEGATECH Dental Lab. Become a partner clinic, ask about turnaround and pricing, or set up scheduled pickup and delivery across the GTA.",
 };
 
 export default function ContactPage() {
@@ -16,8 +17,8 @@ export default function ContactPage() {
     <>
       <PageHeader
         eyebrow="Contact"
-        title="Book your free consultation"
-        description="Tell us a little about what you need and we'll respond within 24 hours. No pressure, no surprises — just honest guidance from licensed denturists."
+        title="Let's work together"
+        description="New to MEGATECH, or have a question about turnaround, materials, or pricing? Tell us about your practice and we'll respond within 24 hours."
       />
 
       <Section className="bg-white">
@@ -63,13 +64,16 @@ export default function ContactPage() {
 
             <div className="rounded-2xl bg-brand-ink p-7 text-white">
               <div className="flex items-start gap-3">
-                <Shield className="h-5 w-5 text-brand-teal mt-1 flex-shrink-0" />
+                <Truck className="h-5 w-5 text-brand-teal mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-display font-semibold mb-2">CDCP &amp; Insurance</h3>
+                  <h3 className="font-display font-semibold mb-2">Have a case ready?</h3>
                   <p className="text-sm text-white/70 text-pretty">
-                    We&apos;re a registered Canadian Dental Care Plan provider
-                    and work with all major insurance plans. We&apos;ll handle
-                    the paperwork — you focus on your smile.
+                    Partner clinics can{" "}
+                    <Link href="/#pickup" className="text-brand-teal underline">
+                      request a pickup
+                    </Link>{" "}
+                    instead — our team is notified instantly and collects on the
+                    next scheduled run across the GTA.
                   </p>
                 </div>
               </div>

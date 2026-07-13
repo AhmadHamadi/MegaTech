@@ -9,8 +9,8 @@ export function ServicesOverview() {
     <Section id="services" className="bg-white">
       <SectionHeader
         chapter={{ number: "01", label: "Services" }}
-        title="Comprehensive denture & prosthetic services"
-        description="From full-arch implant solutions to same-day repairs, every prosthesis is custom-designed and finished by certified denturists in our Toronto lab. Five core services — one consistent standard."
+        title="Everything your clinic prescribes, fabricated in-house"
+        description="From full-arch implant frameworks to night guards and same-day repairs, every case is fabricated to your prescription and finished by hand in our Toronto lab — then returned on our pickup runs."
       />
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

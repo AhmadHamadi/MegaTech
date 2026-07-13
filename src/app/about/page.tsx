@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Award, BadgeCheck, HeartHandshake, Microscope } from "lucide-react";
+import { Award, Truck, Microscope, Layers } from "lucide-react";
 import { PageHeader } from "@/components/ui/page-header";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { Cta } from "@/components/sections/cta";
@@ -9,29 +9,29 @@ import { IMG } from "@/lib/images";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "MEGATACH Dental Lab is an Ontario-based denture clinic and dental laboratory combining digital precision with hand-finished craftsmanship.",
+    "MEGATECH is an Ontario dental laboratory partnering with clinics — combining digital precision with hand-finished craftsmanship, plus scheduled pickup and delivery across the GTA.",
 };
 
 const values = [
   {
     icon: Microscope,
     title: "In-House Lab",
-    body: "Every prosthesis is designed, milled, and finished under one roof — no outsourcing, no delays.",
+    body: "Every case is designed, milled, and finished under one roof — no offshore outsourcing, no lost weeks.",
   },
   {
-    icon: BadgeCheck,
-    title: "Certified Denturists",
-    body: "Our team is registered with the College of Denturists of Ontario and active members of the DAO.",
+    icon: Layers,
+    title: "Experienced Technicians",
+    body: "Cases are hand-characterized by technicians with 20+ years of fabrication experience across every appliance type.",
   },
   {
-    icon: HeartHandshake,
-    title: "Patient-First Care",
-    body: "Free consultations, transparent quotes, and a 24-hour response promise — we treat you the way we'd want to be treated.",
+    icon: Truck,
+    title: "Pickup & Delivery",
+    body: "Scheduled, no-charge collection and return across the GTA — your team never has to chase a case.",
   },
   {
     icon: Award,
-    title: "5-Year Warranty",
-    body: "Every denture we build is backed by a 5-year manufacturer warranty against defects.",
+    title: "Fabrication Warranty",
+    body: "Every case we build is backed by our warranty against defects, with prompt remakes and adjustments.",
   },
 ];
 
@@ -40,8 +40,8 @@ export default function AboutPage() {
     <>
       <PageHeader
         eyebrow="About"
-        title="Lab precision. Patient comfort. One roof."
-        description="MEGATACH Dental Lab combines digital workflows, master craftsmanship, and a patient-first ethos to deliver prosthetics that fit, function, and feel like your own."
+        title="Lab precision. Clinic partnership. One roof."
+        description="MEGATECH combines digital workflows, master craftsmanship, and reliable pickup and delivery to give dental clinics a lab partner they can count on — case after case."
       />
 
       <Section className="bg-white">
@@ -49,7 +49,7 @@ export default function AboutPage() {
           <div className="relative aspect-[4/3] rounded-3xl overflow-hidden ring-1 ring-brand-line">
             <Image
               src={IMG.dentalLab}
-              alt="Inside the MEGATACH lab — digital workflow"
+              alt="Inside the MEGATECH lab — digital workflow"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
@@ -62,22 +62,23 @@ export default function AboutPage() {
             />
             <div className="space-y-4 text-muted-foreground text-pretty">
               <p>
-                MEGATACH was founded with one belief: that every patient
-                deserves a denture that fits perfectly, looks natural, and
-                lasts. Two decades later, we&apos;ve grown into one of
-                Ontario&apos;s most trusted dental labs — serving patients
-                directly and partnering with dental practices across the GTA.
+                MEGATECH was founded on one belief: that a dental clinic
+                deserves a lab partner that delivers a prosthesis fitting
+                perfectly, looking natural, and arriving on time — every single
+                case. Two decades later, we&apos;re one of Ontario&apos;s most
+                trusted dental labs.
               </p>
               <p>
-                We invested early in digital workflows — intraoral scanning,
-                CAD design, CNC milling — because precision is non-negotiable.
-                But every prosthesis is still hand-characterized by a master
-                technician, because craftsmanship is what makes a denture feel
-                like your own.
+                We invested early in digital workflows — accepting scans and
+                impressions alike, CAD design, CNC milling — because precision
+                is non-negotiable. But every case is still hand-characterized by
+                a master technician, because craftsmanship is what makes a
+                prosthesis feel natural in the chair.
               </p>
               <p>
-                Today, we serve over 5,000 patients and 60+ partner clinics
-                across Ontario — and we&apos;re just getting started.
+                Today we partner with dental practices across the GTA, backed by
+                scheduled pickup and delivery — and we&apos;re just getting
+                started.
               </p>
             </div>
           </div>
@@ -87,7 +88,7 @@ export default function AboutPage() {
       <Section className="bg-brand-surface">
         <SectionHeader
           eyebrow="What sets us apart"
-          title="Why patients and dentists choose MEGATACH"
+          title="Why clinics choose MEGATECH"
           align="center"
         />
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">

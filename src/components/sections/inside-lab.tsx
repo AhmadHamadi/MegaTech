@@ -10,12 +10,12 @@ const capabilities = [
   {
     icon: Cpu,
     title: "Digital workflow",
-    body: "Intraoral scanning replaces messy impressions. CAD design gives us sub-millimetre precision before a single tooth is cut.",
+    body: "Send a digital scan or a conventional impression — either way, CAD design gives us sub-millimetre precision before a single tooth is cut.",
   },
   {
     icon: Layers,
     title: "Premium materials",
-    body: "Medical-grade acrylics, cobalt-chrome frames, zirconia teeth. We use only the materials our denturists would put in their own mouth.",
+    body: "Medical-grade acrylics, cobalt-chrome frames, zirconia teeth — only materials we'd stand behind in any case we return.",
   },
   {
     icon: Microscope,
@@ -32,7 +32,7 @@ export function InsideLab() {
           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden ring-1 ring-brand-line shadow-xl">
             <Image
               src={IMG.dentalLab}
-              alt="A MEGATACH technician working in our Toronto dental lab"
+              alt="A MEGATECH technician working in our Toronto dental lab"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
@@ -47,14 +47,14 @@ export function InsideLab() {
           </h2>
           <div className="mt-6 space-y-4 text-muted-foreground text-pretty leading-relaxed">
             <p>
-              Most denture clinics outsource the actual lab work — your
-              prosthetic is mailed across the country, made by people you&apos;ll
-              never meet, then mailed back. We do it differently.
+              Many clinics ship their lab work offshore — cases sent across the
+              world, made by people you&apos;ll never reach, then mailed back
+              weeks later. We do it differently.
             </p>
             <p>
-              At MEGATACH, the denturist who measures your mouth walks ten steps
-              to the lab where your denture is built. That short distance means
-              faster turnaround, tighter fit, and answerability for every case
+              At MEGATECH, your case is designed, milled, and hand-finished by a
+              team you can call by name. That proximity means faster turnaround,
+              a tighter fit, and one lab that&apos;s answerable for every case
               that leaves the building.
             </p>
           </div>
