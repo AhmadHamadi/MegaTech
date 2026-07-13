@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, Clock } from "lucide-react";
 import { Section } from "@/components/ui/section";
 import { ChapterMark } from "@/components/ui/chapter-mark";
 import { ContactForm } from "@/components/site/contact-form";
@@ -45,14 +45,6 @@ export function BookSection() {
                   >
                     {siteConfig.email}
                   </a>
-                </Row>
-                <Row icon={MapPin}>
-                  <div className="text-brand-ink">
-                    {siteConfig.address.street}
-                    <br />
-                    {siteConfig.address.city}, {siteConfig.address.region}{" "}
-                    {siteConfig.address.postal}
-                  </div>
                 </Row>
                 <Row icon={Clock}>
                   <div className="text-brand-ink space-y-0.5">

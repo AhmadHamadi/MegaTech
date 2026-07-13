@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, Clock } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { services } from "@/lib/services";
 
@@ -58,15 +58,6 @@ export function SiteFooter() {
         <div>
           <h4 className="text-white font-display font-semibold mb-4">Visit Us</h4>
           <ul className="space-y-4 text-sm text-white/70">
-            <li className="flex gap-3">
-              <MapPin className="h-4 w-4 flex-shrink-0 mt-0.5 text-brand-teal" />
-              <span>
-                {siteConfig.address.street}
-                <br />
-                {siteConfig.address.city}, {siteConfig.address.region}{" "}
-                {siteConfig.address.postal}
-              </span>
-            </li>
             <li className="flex gap-3">
               <Phone className="h-4 w-4 flex-shrink-0 mt-0.5 text-brand-teal" />
               <a href={siteConfig.phoneHref} className="hover:text-white">

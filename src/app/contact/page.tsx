@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Phone, Mail, MapPin, Clock, Truck } from "lucide-react";
+import { Phone, Mail, Clock, Truck } from "lucide-react";
 import { PageHeader } from "@/components/ui/page-header";
 import { Section } from "@/components/ui/section";
 import { ContactForm } from "@/components/site/contact-form";
@@ -33,12 +33,6 @@ export default function ContactPage() {
                 Visit our lab
               </h3>
               <ul className="space-y-4 text-sm">
-                <ContactRow icon={MapPin}>
-                  {siteConfig.address.street}
-                  <br />
-                  {siteConfig.address.city}, {siteConfig.address.region}{" "}
-                  {siteConfig.address.postal}
-                </ContactRow>
                 <ContactRow icon={Phone}>
                   <a href={siteConfig.phoneHref} className="hover:text-brand-teal">
                     {siteConfig.phone}

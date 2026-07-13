@@ -8,13 +8,6 @@ export const siteConfig = {
   email: "info@megatachdentallab.com",
   phone: "(905) 208-9191",
   phoneHref: "tel:+19052089191",
-  address: {
-    street: "Suite 200",
-    city: "Toronto",
-    region: "Ontario",
-    postal: "M5V 0A1",
-    country: "Canada",
-  },
   hours: [
     { day: "Mon – Fri", time: "8:00 AM – 6:00 PM" },
     { day: "Saturday", time: "9:00 AM – 2:00 PM" },

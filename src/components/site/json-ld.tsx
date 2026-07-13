@@ -9,14 +9,6 @@ export function LocalBusinessJsonLd() {
     url: siteConfig.url,
     telephone: siteConfig.phone,
     email: siteConfig.email,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: siteConfig.address.street,
-      addressLocality: siteConfig.address.city,
-      addressRegion: siteConfig.address.region,
-      postalCode: siteConfig.address.postal,
-      addressCountry: siteConfig.address.country,
-    },
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
