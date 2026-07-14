@@ -13,7 +13,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-brand-line/60 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/80">
-      <div className="container flex h-32 md:h-40 items-center justify-between gap-4">
+      <div className="container flex h-36 md:h-44 items-center justify-between gap-4">
         <Link
           href="/"
           className="flex items-center gap-3 md:gap-4 transition-opacity hover:opacity-80 py-2"
@@ -25,10 +25,10 @@ export function SiteHeader() {
             width={709}
             height={605}
             priority
-            className="h-28 md:h-36 w-auto"
+            className="h-32 md:h-40 w-auto"
           />
           <span className="flex flex-col leading-none">
-            <span className="font-display text-2xl md:text-4xl font-bold tracking-tight text-brand-ink">
+            <span className="font-display text-3xl md:text-5xl font-bold tracking-tight text-brand-ink">
               MEGA<span className="text-brand-teal">TECH</span>
             </span>
             <span className="mt-1 text-[0.6rem] md:text-xs font-semibold uppercase tracking-[0.3em] text-brand-ink/60">
