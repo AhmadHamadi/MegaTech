@@ -3,6 +3,7 @@ import { Inter, Sora } from "next/font/google";
 import { siteConfig } from "@/lib/site-config";
 import { SiteHeader } from "@/components/site/site-header";
 import { SiteFooter } from "@/components/site/site-footer";
+import { MobileCtaBar } from "@/components/site/mobile-cta-bar";
 import { LocalBusinessJsonLd } from "@/components/site/json-ld";
 import "./globals.css";
 
@@ -63,11 +64,12 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${sora.variable}`}>
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen flex flex-col pb-20 lg:pb-0">
         <LocalBusinessJsonLd />
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />
+        <MobileCtaBar />
       </body>
     </html>
   );

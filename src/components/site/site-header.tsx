@@ -16,17 +16,25 @@ export function SiteHeader() {
       <div className="container flex h-24 md:h-28 items-center justify-between gap-4">
         <Link
           href="/"
-          className="flex items-center transition-opacity hover:opacity-80 py-2"
+          className="flex items-center gap-3 md:gap-4 transition-opacity hover:opacity-80 py-2"
           aria-label={siteConfig.name}
         >
           <Image
-            src="/brand/logo.png"
-            alt={siteConfig.name}
-            width={400}
-            height={400}
+            src="/brand/mark.png"
+            alt=""
+            width={709}
+            height={605}
             priority
-            className="h-16 md:h-20 w-auto"
+            className="h-20 md:h-24 w-auto"
           />
+          <span className="flex flex-col leading-none">
+            <span className="font-display text-xl md:text-3xl font-bold tracking-tight text-brand-ink">
+              MEGA<span className="text-brand-teal">TECH</span>
+            </span>
+            <span className="mt-1 text-[0.6rem] md:text-xs font-semibold uppercase tracking-[0.3em] text-brand-ink/60">
+              Dental Lab
+            </span>
+          </span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
@@ -66,7 +74,7 @@ export function SiteHeader() {
       <div
         className={cn(
           "lg:hidden border-t border-brand-line/60 bg-white overflow-hidden transition-all",
-          open ? "max-h-96" : "max-h-0",
+          open ? "max-h-[32rem]" : "max-h-0",
         )}
       >
         <nav className="container py-4 flex flex-col gap-1">

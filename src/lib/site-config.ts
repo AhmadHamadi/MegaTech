@@ -5,7 +5,7 @@ export const siteConfig = {
   description:
     "Ontario dental laboratory fabricating precision dentures, night guards, orthotic appliances, and implant prosthetics for dental clinics — with scheduled pickup and delivery across the GTA.",
   url: "https://megatachdentallab.com",
-  email: "info@megatachdentallab.com",
+  email: "info@megatechdentallab.com",
   phone: "(905) 208-9191",
   phoneHref: "tel:+19052089191",
   hours: [
@@ -19,10 +19,10 @@ export const siteConfig = {
     linkedin: "https://linkedin.com/",
   },
   nav: [
+    { label: "Home", href: "/" },
     { label: "Services", href: "/services" },
     { label: "Our Work", href: "/gallery" },
     { label: "About", href: "/about" },
-    { label: "Request a Pickup", href: "/#pickup" },
     { label: "Contact", href: "/contact" },
   ],
 } as const;
